@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+Home
+{% endblock %}
+
+
+{% block body %}
+<h1 class="description" style="margin-top: 25px">Welcome to the Electronic Boutique database management system. Each tab in the nav bar contains
+entries for those entities. This application manages the customers, employees, electronics, invoices, and invoice/electronics tables.
+Table information can be found those pages. You can also access the pages from the links below:</h1>
+<ul class="description">
+    <li><a href="{{ url_for('customers') }}"><h1 style="color: white">Customers</h1></a></li>
+    <li><a href="{{ url_for('employees') }}"><h1 style="color: white">Employees</h1></a></li>
+    <li><a href="{{ url_for('electronics') }}"><h1 style="color: white">Electronics</h1></a></li>
+    <li><a href="{{ url_for('invoices') }}"><h1 style="color: white">Invoices</h1></a></li>
+    <li><a href="{{ url_for('invoices_electronics') }}"><h1 style="color: white">Invoices/Electronics</h1></a></li>
+</ul>
+{% endblock %}

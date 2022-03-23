@@ -1,0 +1,348 @@
+{% extends 'base.html' %}
+
+{% block header %}
+Invoices / Electronics
+{% endblock %}
+
+{% block body %}
+
+<!-- Citation for Modal and table design
+    # Citation for the following function:
+    # Date: 10/10/2021 - 10/18/2021
+    # Copied from /OR/ Adapted from /OR/ Based on: The idea of using modals came from the first two source urls. The
+    last url is where the source code and how to implement modals comes from. The code used is variation of all sources
+    and unique.
+    # Source URL:
+        - https://www.youtube.com/playlist?list=PLOkVupluCIjuPtTkhO6jmA76uQR994Wvi
+        - https://stackoverflow.com/
+        - https://getbootstrap.com/docs/4.0/components/modal/
+-->
+
+<!-- the first few divs are styles from Bootstrap-->
+    <div class="w-100 p-3 well text-center">
+        <div class="row">
+            <div class="col md-12">
+                <!-- creates a header along with a bootstrap style button that is green to add invoice and link a modal to it-->
+                <div>
+                    <h2>
+                        <button align="left" type="button" class="btn btn-info btn-md" style="float:left" data-toggle="modal" data-target="#searchinvoiceelectronicemodal">Search Invoice/Electronic</button>
+                        <form action="{{ url_for('invoices_electronics') }}" method="post"><button type="submit" align="left" type="button" class="btn btn-warning btn-md" style="float:left">Clear Search</button></form>
+                        Invoices/Electronics
+                        <button align="right" type="button" class="btn btn-success btn-md" style="float:right" data-toggle="modal" data-target="#addinvoiceelectronicemodal">Add Invoice/Electronic</button>
+                        <button align="right" type="button" class="btn btn-info btn-md" style="float:right" data-toggle="modal" data-target="#tableinformationmodal">Table Information</button>
+                    </h2>
+                </div>
+                <table class="table table-hover table-dark" data-toggle="table" data-sort-name="Invoice Details">
+                    <!-- table head to display what is going into the table-->
+                    <thead>
+                        <tr>
+                            <th scope="col" data-sortable="true" data-field="Invoice Details">Invoice Details</th>
+                            <th scope="col" data-sortable="true">Product Details</th>
+                            <th scope="col" data-sortable="true" >Quantity</th>
+                            <th scope="col">Edit / Delete</th>
+                        </tr>
+                    </thead>
+                    <!-- using Jinja and HTML to dynamically populated with the invoice entities-->
+                    <tbody>
+                    {% for invoice_electronic in invoices_electronics %}
+                        <tr>
+                            {% if invoice_electronic.employee_id is not none %}
+                                <td>Customer: {{ invoice_electronic.c_lname }}, {{ invoice_electronic.c_fname }} (ID #{{invoice_electronic.customer_id}}) / Employee: {{ invoice_electronic.e_lname }}, {{ invoice_electronic.e_fname }} (ID #{{invoice_electronic.employee_id}}) / Invoice: ID #{{invoice_electronic.invoice_id}}</td>
+                            {% else %}
+                                <td>Customer: {{ invoice_electronic.c_lname }}, {{ invoice_electronic.c_fname }} (ID #{{invoice_electronic.customer_id}}) / Invoice: ID #{{invoice_electronic.invoice_id}}</td>
+                            {% endif %}
+                            {% if invoice_electronic.version != '' %}
+                                <td>{{ invoice_electronic.make }} / {{ invoice_electronic.type }} / {{ invoice_electronic.model }} / {{ invoice_electronic.version }} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{ invoice_electronic.item_id }})</td>
+                            {% else %}
+                                <td>{{ invoice_electronic.make }} / {{ invoice_electronic.type }} / {{ invoice_electronic.model }} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{ invoice_electronic.item_id }})</td>
+                            {% endif %}
+                            <td>{{ invoice_electronic.item_quantity }}</td>
+                            <td>
+                                <!-- creates a warning style button that will be used to bring up a modal to edit the invoice -->
+                                <a href="/update_invoices_electronics/{{ invoice_electronic.invoice_id }}{{ invoice_electronic.item_id }}" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editinvoiceelectronicemodal{{ invoice_electronic.invoice_id }}{{ invoice_electronic.item_id }}" >Edit Invoice/Electronic</a>
+                                <!-- creates a danger style button that will be used to bring up a modal to delete invoice -->
+                                <a href="/delete_invoices_electronics/{{ invoice_electronic.invoice_id }}{{ invoice_electronic.item_id }}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteinvoiceelectronicemodal{{ invoice_electronic.invoice_id }}{{ invoice_electronic.item_id }}" >Delete Invoice/Electronic</a>
+                            </td>
+                        </tr>
+
+                        <!-- modal to edit invoices that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+                        <!-- The modal id is editinvoiceelectronic in order to match the data-target in the edit invoice button-->
+                        <div class="modal fade" id="editinvoiceelectronicemodal{{ invoice_electronic.invoice_id }}{{ invoice_electronic.item_id }}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title" id="editinvoiceelectroniclabael" style="color:black;">Edit Invoice/Electronic</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                                <!-- this is the form part of the modal that captures that will populate the form with the existing data and then allow the user to save the data-->
+                                <form action="{{ url_for('update_invoice_electronic') }}" method="POST">
+                                    <div class="modal-body" style="color:black">
+                                        <div class="form-group">
+                                            <p align="left"><b>Both the Invoice and Electronic need to exist before updating an entry. Only one Invoice ID and Item ID combination can exist as an entry.</b></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="iid" name="iid" value="{{invoice_electronic.invoice_id}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="eid" name="eid" value="{{invoice_electronic.item_id}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="qty" name="qty" value="{{invoice_electronic.item_quantity}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Invoice Details</label>
+                                            <select type="number" class="form-control" id="invoice_id" name="invoice_id" required="1" min="1" max="4294967295">
+                                                <option value="None"></option>
+                                                {% for invoice_id in invoice_ids %}
+                                                    {% if invoice_id.invoice_id == invoice_electronic.invoice_id %}
+                                                        {% if invoice_id.e_lname is not none %}
+                                                            <option value="{{invoice_id.invoice_id}}" selected>Customer: {{invoice_id.c_lname}}, {{invoice_id.c_fname}} (ID #{{invoice_id.customer_id}}) / Employee: {{invoice_id.e_lname}}, {{invoice_id.e_fname}} (ID #{{invoice_id.employee_id}}) / Invoice: ID #{{invoice_id.invoice_id}}</option>
+                                                        {% else %}
+                                                            <option value="{{invoice_id.invoice_id}}" selected>Customer: {{invoice_id.c_lname}}, {{invoice_id.c_fname}} (ID #{{invoice_id.customer_id}}) / Invoice: ID #{{invoice_id.invoice_id}}</option>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {% if invoice_id.e_lname is not none %}
+                                                            <option value="{{invoice_id.invoice_id}}">Customer: {{invoice_id.c_lname}}, {{invoice_id.c_fname}} (ID #{{invoice_id.customer_id}}) / Employee: {{invoice_id.e_lname}}, {{invoice_id.e_fname}} (ID #{{invoice_id.employee_id}}) / Invoice: ID #{{invoice_id.invoice_id}}</option>
+                                                        {% else %}
+                                                            <option value="{{invoice_id.invoice_id}}">Customer: {{invoice_id.c_lname}}, {{invoice_id.c_fname}} (ID #{{invoice_id.customer_id}}) / Invoice: ID #{{invoice_id.invoice_id}}</option>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Product Details</label>
+                                            <select type="number" class="form-control" id="item_id" name="item_id" required="1" min="1" max="4294967295">
+                                                <option value="None"></option>
+                                                {% for electronic_id in electronic_ids %}
+                                                    {% if electronic_id.item_id == invoice_electronic.item_id %}
+                                                        {% if invoice_electronic.version != '' %}
+                                                            <option selected value="{{electronic_id.item_id}}">{{electronic_id.make}} / {{electronic_id.type}} / {{electronic_id.model}} / {{electronic_id.version}} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{electronic_id.item_id}})</option>
+                                                        {% else %}
+                                                            <option selected value="{{electronic_id.item_id}}">{{electronic_id.make}} / {{electronic_id.type}} / {{electronic_id.model}} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{electronic_id.item_id}})</option>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {% if invoice_electronic.version != '' %}
+                                                            <option value="{{electronic_id.item_id}}">{{electronic_id.make}} / {{electronic_id.type}} / {{electronic_id.model}} / {{electronic_id.version}} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{electronic_id.item_id}})</option>
+                                                        {% else %}
+                                                            <option value="{{electronic_id.item_id}}">{{electronic_id.make}} / {{electronic_id.type}} / {{electronic_id.model}} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{electronic_id.item_id}})</option>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Quantity</label>
+                                            <input type="number" class="form-control" id="quantity" name="quantity" required="1" min="1" max="10000" value="{{invoice_electronic.item_quantity}}">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="editinvoiceelectronicdata" class="btn btn-warning">Save Invoice/Electronic Data</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- modal to edit invoices that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+                        <!-- The modal id is deleteinvoiceelectronic in order to match the data-target in the delete invoice button-->
+                        <div class="modal fade" id="deleteinvoiceelectronicemodal{{ invoice_electronic.invoice_id }}{{ invoice_electronic.item_id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <!-- alerts the invoice that there are about to delete the user-->
+                                <h2 class="modal-title" id="deleteinvoiceelectroniclabael" style="color:black;">ARE YOU SURE YOU WANT TO DELETE THIS ENTRY</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                                <!-- this is the form part of the modal that captures the invoice/electronic data and sends it to the route delete_invoice_electronic-->
+                                <form action="{{ url_for('delete_invoice_electronic') }}" method="POST">
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <input type="hidden" id="iid" name="iid" value="{{invoice_electronic.invoice_id}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="eid" name="eid" value="{{invoice_electronic.item_id}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="qty" name="qty" value="{{invoice_electronic.item_quantity}}">
+                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="deleteinvoiceelectronicedata" class="btn btn-danger">DELETE ENTRY</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal to table information that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is table -->
+    <div class="modal fade" id="tableinformationmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Invoices / Electronics Table Information</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <form action="" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>This table links the Invoice and Electronics in a M:M relationship by Inovice ID from Invoices and Item ID in Electronics. The Invoice Details and Product Details are shown in the following formats, respectively:</b></p>
+                        <ul>
+                            <li align="left"><b>customer last name, customer first (ID #) / employee last name, employee first name (ID #) / Invoice: ID #</b></li>
+                            <li align="left"><b>make / type / model / version &nbsp;&nbsp;&nbsp;&nbsp; (ID #)</b></li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <p align="left"><b>Both the Invoice and Electronic Item need to exist before creating an entry. Only one Invoice and Product combination can exist as an entry.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <p align="left"><b>At a minimum, one field must be entered for a search to work. The search works as an "AND" operation for all fields that have inputs.</b></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to add invoice that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is addinvoiceelectronic in order to match the data-target in the add invoice button-->
+    <div class="modal fade" id="addinvoiceelectronicemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Add Invoice/Electronic</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is addinvoiceelectronic in order to match the data-target in the addinvoiceelectronic button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_invoice -->
+            <form action="{{ url_for('add_invoice_electronic') }}" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p><b>Both the Invoice and Electronic need to exist before creating an entry. Only one Invoice ID and Item ID combination can exist as an entry.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Invoice Details</label>
+                        <select type="number" class="form-control" id="invoice_id" name="invoice_id" required="1" min="1" max="4294967295">
+                            <option value="None" selected></option>
+                            {% for invoice_id in invoice_ids %}
+                                {% if invoice_id.e_lname is not none %}
+                                    <option value="{{invoice_id.invoice_id}}">Customer: {{invoice_id.c_lname}}, {{invoice_id.c_fname}} (ID #{{invoice_id.customer_id}}) / Employee: {{invoice_id.e_lname}}, {{invoice_id.e_fname}} (ID #{{invoice_id.employee_id}}) / Invoice: ID #{{invoice_id.invoice_id}}</option>
+                                {% else %}
+                                    <option value="{{invoice_id.invoice_id}}">Customer: {{invoice_id.c_lname}}, {{invoice_id.c_fname}} (ID #{{invoice_id.customer_id}}) / Invoice: ID #{{invoice_id.invoice_id}}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Details</label>
+                        <select input type="number" class="form-control" id="item_id" name="item_id" required="1" min="1" max="4294967295">
+                            <option value="None" selected></option>
+                            {% for electronic_id in electronic_ids %}
+                                {% if electronic_id.version != '' %}
+                                    <option value="{{electronic_id.item_id}}">{{electronic_id.make}} / {{electronic_id.type}} / {{electronic_id.model}} / {{electronic_id.version}} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{electronic_id.item_id}})</option>
+                                {% else %}
+                                    <option value="{{electronic_id.item_id}}">{{electronic_id.make}} / {{electronic_id.type}} / {{electronic_id.model}} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{electronic_id.item_id}})</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" class="form-control" id="quantity" name="quantity" required="1" min=1 max="10000" placeholder="10">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="addinvoiceelectronicdata" class="btn btn-success">Save Invoice/Electronic Data</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to search invoiceelectronics that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is search searchinvoiceelectronics in order to match the data-target in the add customer button-->
+    <div class="modal fade" id="searchinvoiceelectronicemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Search Invoice/Electronic</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is searchincvoiceelectronic in order to match the data-target in the searchinvoiceelectronic button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_customer -->
+            <form action="{{ url_for('search_invoice_electronic') }}" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>At a minimum, one field must be entered for a search to work. The search works as an "AND" operation for all fields that have inputs.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Invoice Details</label>
+                        <select type="number" class="form-control" id="invoice_id" name="invoice_id" min="1" max="4294967295">
+                            <option value="None" selected></option>
+                            {% for invoice_electronic in invoices_electronics %}
+                                {% if invoice_electronic.employee_id is not none %}
+                                    <option value="{{invoice_electronic.invoice_id}}">Customer: {{ invoice_electronic.c_lname }}, {{ invoice_electronic.c_fname }} (ID #{{invoice_electronic.customer_id}}) / Employee: {{ invoice_electronic.e_lname }}, {{ invoice_electronic.e_fname }} (ID #{{invoice_electronic.employee_id}}) / Invoice: ID #{{invoice_electronic.invoice_id}}</option>
+                                {% else %}
+                                    <option value="{{invoice_electronic.invoice_id}}">Customer: {{ invoice_electronic.c_lname }}, {{ invoice_electronic.c_fname }} (ID #{{invoice_electronic.customer_id}}) / Invoice: ID #{{invoice_electronic.invoice_id}}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Details</label>
+                        <select type="number" class="form-control" id="item_id" name="item_id" min="1" max="4294967295">
+                            <option value="None" selected></option>
+                            {% for invoice_electronic in invoices_electronics %}
+                                {% if invoice_electronic.employee_id is not none %}
+                                    <option value="{{invoice_electronic.item_id}}">{{ invoice_electronic.make }} / {{ invoice_electronic.type }} / {{ invoice_electronic.model }} / {{ invoice_electronic.version }} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{ invoice_electronic.item_id }})</option>
+                                {% else %}
+                                    <option value="{{invoice_electronic.item_id}}">{{ invoice_electronic.make }} / {{ invoice_electronic.type }} / {{ invoice_electronic.model }} &nbsp;&nbsp;&nbsp;&nbsp; (ID #{{ invoice_electronic.item_id }})</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="searchelectronicsinvoices" class="btn btn-success">Search Invoice/Electronics</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal to see table information that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is tableinformationmodal order to match the data-target in the add invoice button
+    -->
+
+{% endblock %}

@@ -1,0 +1,307 @@
+{% extends 'base.html' %}
+
+{% block header %}
+Invoices
+{% endblock %}
+
+{% block body %}
+
+<!-- Citation for Modal
+    # Citation for the following function:
+    # Date: 10/10/2021 - 10/18/2021
+    # Copied from /OR/ Adapted from /OR/ Based on: The idea of using modals came from the first two source urls. The
+    last url is where the source code and how to implement modals comes from. The code used is variation of all sources
+    and unique.
+    # Source URL:
+        - https://www.youtube.com/playlist?list=PLOkVupluCIjuPtTkhO6jmA76uQR994Wvi
+        - https://stackoverflow.com/
+        - https://getbootstrap.com/docs/4.0/components/modal/
+-->
+
+<!-- the first few divs are styles from Bootstrap-->
+    <div class="w-100 p-3 well text-center">
+        <div class="row">
+            <div class="col md-12">
+                <!-- creates a header along with a bootstrap style button that is green to add invoice and link a modal to it-->
+                <div>
+                    <h2>
+                        <button align="left" type="button" class="btn btn-info btn-md" style="float:left" data-toggle="modal" data-target="#searchinvoicemodal">Search Invoice</button>
+                        <form action="{{ url_for('invoices') }}" method="post"><button type="submit" align="left" type="button" class="btn btn-warning btn-md" style="float:left">Clear Search</button></form>
+                        Invoices
+                        <button align="right" type="button" class="btn btn-success btn-md" style="float:right" data-toggle="modal" data-target="#addinvoicemodal">Add Invoice</button>
+                        <button align="right" type="button" class="btn btn-info btn-md" style="float:right" data-toggle="modal" data-target="#tableinformationmodal">Table Information</button>
+                    </h2>
+                </div>
+                <table class="table table-hover table-dark" data-toggle="table" data-sort-name="Invoice ID">
+                    <!-- table head to display what is going into the table-->
+                    <thead>
+                        <tr>
+                            <th scope="col" data-sortable="true" data-field="Invoice ID">Invoice ID</th>
+                            <th scope="col" data-sortable="true">Customer Details</th>
+                            <th scope="col" data-sortable="true">Employee Details</th>
+                            <th scope="col" data-sortable="true">Total Sales</th>
+                            <th scope="col">Edit / Delete</th>
+                        </tr>
+                    </thead>
+
+                    <!-- using Jinja and HTML to dynamically populated with the invoice entities-->
+                    <tbody>
+                    {% for invoice in invoices %}
+                        <tr>
+                            <td>{{ invoice.invoice_id }}</td>
+                            <td>{{ invoice.c_lname }}, {{ invoice.c_fname }}&nbsp;&nbsp;&nbsp;&nbsp;(ID# {{ invoice.cus_id }})</td>
+                            {% if invoice.emp_id is not none %}
+                                <td>{{ invoice.e_lname }}, {{ invoice.e_fname }}&nbsp;&nbsp;&nbsp;&nbsp;(ID# {{ invoice.emp_id }})</td>
+                            {% else %}
+                                <td></td>
+                            {% endif %}
+                            <td>{{ invoice.total_sale }}</td>
+                            <td>
+                                <!-- creates a warning style button that will be used to bring up a modal to edit the invoice -->
+                                <a href="/update_invoices/{{invoice.invoice_id}}" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editinvoicemodal{{invoice.invoice_id}}" >Edit Invoice</a>
+                                <!-- creates a danger style button that will be used to bring up a modal to delete invoice -->
+                                <a href="/delete_invoices/{{invoice.invoice_id}}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteinvoicemodal{{invoice.invoice_id}}" >Delete Invoice</a>
+                            </td>
+                        </tr>
+
+                        <!-- modal to edit invoices that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+                        <!-- The modal id is editinvoice in order to match the data-target in the edit invoice button-->
+                        <div class="modal fade" id="editinvoicemodal{{invoice.invoice_id}}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title" id="editinvoicelabael" style="color:black;">Edit Invoice</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                                <!-- this is the form part of the modal that captures that will populate the form with the existing data and then allow the user to save the data-->
+                                <form action="{{ url_for('update_invoice') }}" method="POST">
+                                    <div class="modal-body" style="color:black">
+                                        <div class="form-group">
+                                            <p align="left"><b>When updating an Invoice, Employee ID is nullable. All other fields are mandatory.</b></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="invoice_id" name="invoice_id" value="{{invoice.invoice_id}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Customer Details</label>
+                                            <select type="number" class="form-control" id="customer_id" name="customer_id" required="1" min="1" max="4294967295">
+                                                <option value="None"></option>
+                                                {% for customer_id in customer_ids %}
+                                                    {% if customer_id.customer_id == invoice.cus_id %}
+                                                        <option value={{customer_id.customer_id}} selected>{{ customer_id.last_name }}, {{ customer_id.first_name }}&nbsp;&nbsp;&nbsp;&nbsp;(ID #{{customer_id.customer_id}})</option>
+                                                    {% else %}
+                                                        <option value={{customer_id.customer_id}}>{{ customer_id.last_name }}, {{ customer_id.first_name }}&nbsp;&nbsp;&nbsp;&nbsp;(ID #{{customer_id.customer_id}})</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Employee Details</label>
+                                            <select type="number" class="form-control" id="employee_id" name="employee_id" min="1" max="4294967295">
+                                                <option value="None">NULL</option>
+                                                {% for employee_id in employee_ids %}
+                                                    {% if employee_id.employee_id == invoice.emp_id %}
+                                                        <option value={{employee_id.employee_id}} selected>{{ employee_id.last_name }}, {{ employee_id.first_name }}&nbsp;&nbsp;&nbsp;&nbsp;(ID #{{employee_id.employee_id}})</option>
+                                                    {% else %}
+                                                        <option value={{employee_id.employee_id}}>{{ employee_id.last_name }}, {{ employee_id.first_name }}&nbsp;&nbsp;&nbsp;&nbsp;(ID #{{employee_id.employee_id}})</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Total Sales</label>
+                                            <input type="number" class="form-control" id="sale" name="sale" required="1" step=".01" value="{{invoice.total_sale}}" min=".01" max="99999999.99">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="editinvoicedata" class="btn btn-warning">Save Invoice Data</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- modal to edit invoices that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+                        <!-- The modal id is deleteinvoice in order to match the data-target in the delete invoice button-->
+                        <div class="modal fade" id="deleteinvoicemodal{{invoice.invoice_id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <!-- alerts the invoice that there are about to delete the user-->
+                                <h2 class="modal-title" id="deleteinvoicelabael" style="color:black;">ARE YOU SURE YOU WANT TO DELETE INVOICE</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                                <!-- this is the form part of the modal that captures the invoice_id and sends it to the route delete_invoice-->
+                                <form action="{{ url_for('delete_invoice') }}" method="POST">
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <input type="hidden" id="invoice_id" name="invoice_id" value="{{invoice.invoice_id}}">
+                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="editinvoicedata" class="btn btn-danger">DELETE INVOICE</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal to add invoice that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is addinvoice in order to match the data-target in the add invoice button-->
+    <div class="modal fade" id="tableinformationmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Invoices Table Information</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is addinvoice in order to match the data-target in the addinvoice button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_invoice -->
+            <form action="" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>This table is used for records of Invoices and links Customer and Employee information to the Invoice. Customer and Employees Details are displayed in the following format:</b></p>
+                        <ul>
+                            <li align="left"><b>last name, first name&nbsp;&nbsp;&nbsp;&nbsp;(ID #)</b></li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <p align="left"><b>When creating or updating an Invoice, Employee ID / Details is nullable. All other fields are mandatory.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <p align="left"><b>At a minimum, one field must be entered for a search to work. The search works as an "AND" operation for all fields that have inputs.</b></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to add invoice that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is addinvoice in order to match the data-target in the add invoice button-->
+    <div class="modal fade" id="addinvoicemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Add Invoice</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is addinvoice in order to match the data-target in the addinvoice button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_invoice -->
+            <form action="{{ url_for('add_invoice') }}" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>When creating an Invoice, Employee ID is nullable. All other fields are mandatory.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Customer Details</label>
+                        <select type="number" class="form-control" id="customer_id" name="customer_id" required="1" min="1" max="4294967295">
+                            <option value="None" selected></option>
+                            {% for customer_id in customer_ids %}
+                                <option value={{customer_id.customer_id}}>{{ customer_id.last_name }}, {{ customer_id.first_name }}&nbsp;&nbsp;&nbsp;&nbsp;(ID #{{customer_id.customer_id}})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Employee Details</label>
+                        <select type="number" class="form-control" id="employee_id" name="employee_id" required="1" min="1" max="4294967295">
+                            <option value="None" selected>NULL</option>
+                            {% for employee_id in employee_ids %}
+                                <option value={{employee_id.employee_id}}>{{ employee_id.last_name }}, {{ employee_id.first_name }}&nbsp;&nbsp;&nbsp;&nbsp;(ID #{{employee_id.employee_id}})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Total Sales</label>
+                        <input type="number" class="form-control" id="sale" name="sale" required="1" step=".01" placeholder="27699.96" min=".01" max="99999999.99">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="addinvoicedata" class="btn btn-success">Save Invoice Data</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to search invoice that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is search invoice in order to match the data-target in the add customer button-->
+    <div class="modal fade" id="searchinvoicemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Search Invoice</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is searchinvoices in order to match the data-target in the search button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_customer -->
+            <form action="{{ url_for('search_invoice') }}" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>At a minimum, one field must be entered for a search to work. The search works as an "AND" operation for all fields that have inputs.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Invoice ID</label>
+                        <input type="number" class="form-control" id="invoice_id" name="invoice_id" min="1" max="4294967295">
+                    </div>
+                    <div class="form-group">
+                        <label>Customer Details</label>
+                        <select type="number" class="form-control" id="customer_id" name="customer_id" required="1" min="1" max="4294967295">
+                            <option value="None" selected></option>
+                            {% for cus in cus_search %}
+                                <option value={{cus.cus_id}}>{{ cus.c_lname }}, {{ cus.c_fname }}&nbsp;&nbsp;&nbsp;&nbsp;(ID #{{cus.cus_id}})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Employee Details</label>
+                        <select type="number" class="form-control" id="employee_id" name="employee_id" required="1" min="1" max="4294967295">
+                            <option value="None" selected></option>
+                            <option value="NULL">NULL</option>
+                            {% for emp in emp_search %}
+                                <option value={{emp.emp_id}}>{{ emp.e_lname }}, {{ emp.e_fname }}&nbsp;&nbsp;&nbsp;&nbsp;(ID #{{emp.emp_id}})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Total Sales</label>
+                        <input type="number" class="form-control" id="sale" name="sale" step=".01">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="searchelectronics" class="btn btn-success">Search Invoice</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

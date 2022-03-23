@@ -1,0 +1,7 @@
+/*
+Add darkmode to base template
+*/
+ body {
+      background-color: #212121;
+      color: white
+      }

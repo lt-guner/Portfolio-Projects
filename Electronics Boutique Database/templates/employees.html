@@ -1,0 +1,374 @@
+{% extends 'base.html' %}
+
+{% block header %}
+Employees
+{% endblock %}
+
+{% block body %}
+
+<!-- Citation for Modal
+    # Citation for the following function:
+    # Date: 10/10/2021 - 10/18/2021
+    # Copied from /OR/ Adapted from /OR/ Based on: The idea of using modals came from the first two source urls. The
+    last url is where the source code and how to implement modals comes from. The code used is variation of all sources
+    and unique.
+    # Source URL:
+        - https://www.youtube.com/playlist?list=PLOkVupluCIjuPtTkhO6jmA76uQR994Wvi
+        - https://stackoverflow.com/
+        - https://getbootstrap.com/docs/4.0/components/modal/
+-->
+
+<!-- the first few divs are styles from Bootstrap-->
+    <div class="w-100 p-3 well text-center">
+        <div class="row">
+            <div class="col md-12">
+                <!-- creates a header along with a bootstrap style button that is green to add employee and link a modal to it-->
+                <div>
+                    <h2>
+                        <button align="left" type="button" class="btn btn-info btn-md" style="float:left" data-toggle="modal" data-target="#searchemployeemodal">Search Employee</button>
+                        <form action="{{ url_for('employees') }}" method="post"><button type="submit" align="left" type="button" class="btn btn-warning btn-md" style="float:left">Clear Search</button></form>
+                        Employees
+                        <button align="right" type="button" class="btn btn-success btn-md" style="float:right" data-toggle="modal" data-target="#addemployeemodal">Add Employee</button>
+                        <button align="right" type="button" class="btn btn-info btn-md" style="float:right" data-toggle="modal" data-target="#tableinformationmodal">Table Information</button>
+                    </h2>
+                </div>
+                <table class="table table-hover table-dark" data-toggle="table" data-sort-name="Invoice Details">
+
+                    <!-- table head to display what is going into the table-->
+                    <thead>
+                        <tr>
+                            <th scope="col" data-sortable="true" data-field="Invoice Details">Employee ID</th>
+                            <th scope="col" data-sortable="true">First Name</th>
+                            <th scope="col" data-sortable="true">Last Name</th>
+                            <th scope="col" data-sortable="true">SSN</th>
+                            <th scope="col" data-sortable="true">Phone Number</th>
+                            <th scope="col" data-sortable="true">Email</th>
+                            <th scope="col" data-sortable="true">Address</th>
+                            <th scope="col" data-sortable="true">Apt #</th>
+                            <th scope="col" data-sortable="true">City</th>
+                            <th scope="col" data-sortable="true">State</th>
+                            <th scope="col" data-sortable="true">Zip</th>
+                            <th scope="col" data-sortable="true">Birthday</th>
+                            <th scope="col">Edit / Delete</th>
+                        </tr>
+                    </thead>
+
+                    <!-- using Jinja and HTML to dynamically populated with the employee entities-->
+                    <tbody>
+                    {% for employee in employees %}
+                        <tr>
+                            <td>{{ employee.employee_id }}</td>
+                            <td>{{ employee.first_name }}</td>
+                            <td>{{ employee.last_name }}</td>
+                            <td>{{ employee.ssn }}</td>
+                            <td>{{ employee.phone_number }}</td>
+                            <td>{{ employee.email }}</td>
+                            <td>{{ employee.address }}</td>
+                            {% if employee.apt_number is not none %}
+                                <td>{{ employee.apt_number }}</td>
+                            {% else %}
+                                <td></td>
+                            {% endif %}
+                            <td>{{ employee.city }}</td>
+                            <td>{{ employee.state }}</td>
+                            <td>{{ employee.zip }}</td>
+                            <td>{{ employee.birthday }}</td>
+                            <td>
+                                <!-- creates a warning style button that will be used to bring up a modal to edit the employee -->
+                                <a href="/update_employees/{{employee.employee_id}}" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editemployeemodal{{employee.employee_id}}" >Edit Employee</a>
+                                <!-- creates a danger style button that will be used to bring up a modal to delete employee -->
+                                <a href="/delete_employees/{{employee.employee_id}}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteemployeemodal{{employee.employee_id}}" >Delete Employee</a>
+                            </td>
+                        </tr>
+
+                        <!-- modal to edit employees that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+                        <!-- The modal id is editemployee in order to match the data-target in the edit employee button-->
+                        <div class="modal fade" id="editemployeemodal{{employee.employee_id}}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title" id="editemployeelabael" style="color:black;">Edit Employee</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                                <!-- this is the form part of the modal that captures that will populate the form with the existing data and then allow the user to save the data-->
+                                <form action="{{ url_for('update_employee') }}" method="POST">
+                                    <div class="modal-body" style="color:black">
+                                        <div class="form-group">
+                                            <p align="left"><b>When updating an Employee, Apt# is nullable. Email, Phone Number, and SSN need to be unique.</b></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="eid" name="eid" value="{{employee.employee_id}}">
+                                        </div>
+                                        <div class="form-group; class=color:black;">
+                                            <label >First Name</label>
+                                            <input type="text" pattern="[a-zA-Z\s]+" class="form-control" id=fname name="fname" required="1" maxlength="35" value="{{employee.first_name}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" pattern="[a-zA-Z\s]+" class="form-control" id=lname name="lname" required="1" maxlength="35" value="{{employee.last_name}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>SSN</label>
+                                            <input type="text" class="form-control" id="ssn" name="ssn" pattern="[0-9]+" required="1" minlength="9" maxlength="9" value="{{employee.ssn}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Phone Number</label>
+                                            <input type="text" class="form-control" id="phone" name="phone" pattern="[0-9]+" required="1" minlength="10" maxlength="10" value="{{employee.phone_number}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" required="1"  maxlength="50" value="{{employee.email}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>address</label>
+                                            <input type="text" class="form-control" id="address" name="address" required="1"  maxlength="70" value="{{employee.address}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Apt #</label>
+                                            <input type="text" class="form-control" id=apt name="apt" maxlength="20" placeholder="1112"value="{{employee.apt_number}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>City</label>
+                                            <input type="text" class="form-control" id="city" name="city" pattern="[a-zA-Z\s]+" required="1"  maxlength="50" value="{{employee.city}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>State</label>
+                                            <input type="text" class="form-control" id="state" name="state" pattern="[a-zA-Z]+" required="1" minlength="2" maxlength="2" value="{{employee.state}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Zip</label>
+                                            <input class="form-control" id="zip" name="zip" type="text" pattern="[0-9]+" minlength="5" maxlength="5" value="{{employee.zip}}" required="1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Birthday</label>
+                                            <input class="form-control" type="date" id="birthday" required="1" name="birthday" value="{{employee.birthday}}">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="editemployeedata" class="btn btn-warning">Save Employee Data</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- modal to edit employees that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+                        <!-- The modal id is deleteemployee in order to match the data-target in the delete employee button-->
+                        <div class="modal fade" id="deleteemployeemodal{{employee.employee_id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <!-- alerts the employee that there are about to delete the user-->
+                                <h2 class="modal-title" id="deleteemployeelabael" style="color:black;">ARE YOU SURE YOU WANT TO DELETE EMPLOYEE</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                                <!-- this is the form part of the modal that captures the employee_id and sends it to the route delete_employee-->
+                                <form action="{{ url_for('delete_employee') }}" method="POST">
+                                    <div class="modal-body" style="color:black">
+                                        <div class="form-group">
+                                            <input type="hidden" id="eid" name="eid" value="{{employee.employee_id}}">
+                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="editemployeedata" class="btn btn-danger">DELETE EMPLOYEE</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal to add employee that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is addemployee in order to match the data-target in the add employee button-->
+    <div class="modal fade" id="addemployeemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Add Employee</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is addemployee in order to match the data-target in the addemployee button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_employee -->
+            <form action="{{ url_for('add_employee') }}" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>When creating an Employee, Apt# is nullable. Email, Phone Number, and SSN need to be unique.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" pattern="[a-zA-Z\s]+" class="form-control" id=fname name="fname" required="1" maxlength="35" placeholder="John" >
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" pattern="[a-zA-Z\s]+" class="form-control" id=lname name="lname" required="1" maxlength="35" placeholder="Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>SSN</label>
+                        <input type="text" class="form-control" id="ssn" name="ssn" pattern="[0-9]+" required="1" minlength="9" maxlength="9" placeholder="000000000">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" class="form-control" id="phone" name="phone" pattern="[0-9]+" required="1" minlength="10" maxlength="10" placeholder="1231231234">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required="1"  maxlength="50" placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>address</label>
+                        <input type="text" class="form-control" id="address" name="address" required="1"  maxlength="70" placeholder="123 Example Ave">
+                    </div>
+                    <div class="form-group">
+                        <label>Apt #</label>
+                        <input type="text" class="form-control" id=apt name="apt" maxlength="20" placeholder="1112">
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" class="form-control" id="city" name="city" pattern="[a-zA-Z\s]+" required="1"  maxlength="50" placeholder="Example City">
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" class="form-control" id="state" name="state" pattern="[a-zA-Z]+" required="1" minlength="2" maxlength="2" placeholder="NY">
+                    </div>
+                    <div class="form-group">
+                        <label>Zip</label>
+                        <input class="form-control" id="zip" name="zip" type="text" pattern="[0-9]+" minlength="5" maxlength="5" placeholder="11111" required="1">
+                    </div>
+                    <div class="form-group">
+                        <label>Birthday</label>
+                        <input class="form-control" type="date" id="birthday" required="1" name="birthday">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="addemployeedata" class="btn btn-success">Save Employee Data</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to add invoice that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is addinvoice in order to match the data-target in the add invoice button-->
+    <div class="modal fade" id="tableinformationmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Employees Table Information</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is addinvoice in order to match the data-target in the addinvoice button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_invoice -->
+            <form action="" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>This table is used for records of Employees.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <p align="left"><b>When creating or updating an Employee, Apt# is nullable. Email, Phone Number, and SSN need to be unique.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <p align="left"><b>At a minimum, one field must be entered for a search to work. The search works as an "AND" operation for all fields that have inputs.</b></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to search employee that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is search customer in order to match the data-target in the add customer button-->
+    <div class="modal fade" id="searchemployeemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Search Employee</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is searchemployee in order to match the data-target in the searchemployee button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_customer -->
+            <form action="{{ url_for('search_employee') }}" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>At a minimum, one field must be entered for a search to work. The search works as an "AND" operation for all fields that have inputs.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Employee ID</label>
+                        <input type="number" class="form-control" pattern="[0-9]+" maxlength="35" id="employee_id" name="employee_id">
+                    </div>
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" pattern="[a-zA-Z\s]+" maxlength="35" id="fname" name="fname">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" pattern="[a-zA-Z\s]+" id="lname" name="lname">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" class="form-control" pattern="[0-9]+" minlength="10" maxlength="10" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" maxlength="50" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" class="form-control" maxlength="70" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label>Apt</label>
+                        <input type="text" class="form-control" maxlength="20" id="apt" name="apt">
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" class="form-control" pattern="[a-zA-Z\s]+" maxlength="50" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" class="form-control" pattern="[a-zA-Z]+" minlength="2" maxlength="2" id="state" name="state">
+                    </div>
+                    <div class="form-group">
+                        <label>Zip</label>
+                        <input type="number" class="form-control" pattern="[0-9]+" minlength="5" maxlength="5" id="zip" name="zip">
+                    </div>
+                    <div class="form-group">
+                        <label>Birthday</label>
+                        <input type="date" class="form-control" id="birthday" name="birthday">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="searchemployee" class="btn btn-success">Search Employee</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

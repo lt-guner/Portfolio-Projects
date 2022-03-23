@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+Error
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Page not found, redirecting back to home...</h1>
+
+{% endblock %}
+
+{% block javascript %}
+
+
+    <script>
+            setTimeout(function(){
+            window.location.href = "{{url_for('home')}}";
+        }, 2000);
+    </script>
+
+{% endblock %}

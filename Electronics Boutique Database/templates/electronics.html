@@ -1,0 +1,293 @@
+{% extends 'base.html' %}
+
+{% block header %}
+Electronics
+{% endblock %}
+
+{% block body %}
+
+<!-- Citation for Modal
+    # Citation for the following function:
+    # Date: 10/10/2021 - 10/18/2021
+    # Copied from /OR/ Adapted from /OR/ Based on: The idea of using modals came from the first two source urls. The
+    last url is where the source code and how to implement modals comes from. The code used is variation of all sources
+    and unique.
+    # Source URL:
+        - https://www.youtube.com/playlist?list=PLOkVupluCIjuPtTkhO6jmA76uQR994Wvi
+        - https://stackoverflow.com/
+        - https://getbootstrap.com/docs/4.0/components/modal/
+-->
+
+<!-- the first few divs are styles from Bootstrap-->
+    <div class="w-100 p-3 well text-center">
+        <div class="row">
+            <div class="col md-12">
+                <!-- creates a header along with a bootstrap style button that is green to add electronic and link a modal to it-->
+                <div>
+                    <h2>
+                        <button align="left" type="button" class="btn btn-info btn-md" style="float:left" data-toggle="modal" data-target="#searchelectronicmodal">Search Electronic</button>
+                        <form action="{{ url_for('electronics') }}" method="post"><button type="submit" align="left" type="button" class="btn btn-warning btn-md" style="float:left">Clear Search</button></form>
+                        Electronics
+                        <button align="right" type="button" class="btn btn-success btn-md" style="float:right" data-toggle="modal" data-target="#addelectronicmodal">Add Electronic</button>
+                        <button align="right" type="button" class="btn btn-info btn-md" style="float:right" data-toggle="modal" data-target="#tableinformationmodal">Table Information</button>
+                    </h2>
+                </div>
+                <table class="table table-hover table-dark" data-toggle="table" data-sort-name="Item ID">
+
+                    <!-- table head to display what is going into the table-->
+                    <thead>
+                        <tr>
+                            <th scope="col" data-sortable="true" data-field="Item ID">Item ID</th>
+                            <th scope="col" data-sortable="true">Make</th>
+                            <th scope="col" data-sortable="true">Type</th>
+                            <th scope="col" data-sortable="true">Model</th>
+                            <th scope="col" data-sortable="true">Version</th>
+                            <th scope="col" data-sortable="true">Price</th>
+                            <th scope="col">Edit / Delete</th>
+                        </tr>
+                    </thead>
+
+                    <!-- using Jinja and HTML to dynamically populated with the electronic entities-->
+                    <tbody>
+                    {% for electronic in electronics %}
+                        <tr>
+                            <td>{{ electronic.item_id }}</td>
+                            <td>{{ electronic.make }}</td>
+                            <td>{{ electronic.type }}</td>
+                            <td>{{ electronic.model }}</td>
+                            <td>{{ electronic.version }}</td>
+                            <td>{{ electronic.price }}</td>
+                            <td>
+                                <!-- creates a warning style button that will be used to bring up a modal to edit the electronic -->
+                                <a href="/update_electronics/{{electronic.item_id}}" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editelectronicmodal{{electronic.item_id}}" >Edit Electronic</a>
+                                <!-- creates a danger style button that will be used to bring up a modal to delete electronic -->
+                                <a href="/delete_electronics/{{electronic.item_id}}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteelectronicmodal{{electronic.item_id}}" >Delete Electronic</a>
+                            </td>
+                        </tr>
+
+                        <!-- modal to edit electronics that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+                        <!-- The modal id is editelectronic in order to match the data-target in the edit electronic button-->
+                        <div class="modal fade" id="editelectronicmodal{{electronic.item_id}}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title" id="editemployeelabael" style="color:black;">Edit Electronic</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                                <!-- this is the form part of the modal that captures that will populate the form with the existing data and then allow the user to save the data-->
+                                <form action="{{ url_for('update_electronic') }}" method="POST">
+                                    <div class="modal-body" style="color:black">
+                                        <div class="form-group">
+                                            <p align="left"><b>When updating an Item, all fields except Version are mandatory.</b></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="iid" name="iid" value="{{electronic.item_id}}">
+                                        </div>
+                                        <div class="form-group; class=color:black;">
+                                            <label >Make</label>
+                                            <input type="text" pattern="[a-zA-Z\s0-9]+" class="form-control" id=make name="make" required="1" maxlength="50" value="{{electronic.make}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Type</label>
+                                            <input type="text" pattern="[a-zA-Z\s0-9]+" class="form-control" id=type name="type" required="1" maxlength="50" value="{{electronic.type}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Model</label>
+                                            <input type="text" pattern="[a-zA-Z\s0-9.]+" class="form-control" id=model name="model" required="1" maxlength="50" value="{{electronic.model}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Version</label>
+                                            <input type="text" pattern="[a-zA-Z\s0-9\.]+" class="form-control" id=version name="version" maxlength="50" value="{{electronic.version}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Price</label>
+                                            <input type="number" class="form-control" id="price" name="price" required="1" step=".01" value="{{electronic.price}}" min=".01" max="999999.99">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="editelectronicdata" class="btn btn-warning">Save Electronic Data</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- modal to edit electronics that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+                        <!-- The modal id is deleteelectronic in order to match the data-target in the delete electronic button-->
+                        <div class="modal fade" id="deleteelectronicmodal{{electronic.item_id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <!-- alerts the electronic that there are about to delete the user-->
+                                <h2 class="modal-title" id="deleteelectroniclabael" style="color:black;">ARE YOU SURE YOU WANT TO DELETE ELECTRONIC</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                                <!-- this is the form part of the modal that captures the item_id and sends it to the route delete_electronic-->
+                                <form action="{{ url_for('delete_electronic') }}" method="POST">
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <input type="hidden" id="iid" name="iid" value="{{electronic.item_id}}">
+                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="submit" name="editelectronicdata" class="btn btn-danger">DELETE ELECTRONIC</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal to add electronic that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is addelectronic in order to match the data-target in the add electronic button-->
+    <div class="modal fade" id="addelectronicmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Add Electronic</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is addelectronic in order to match the data-target in the addelectronic button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_electronic -->
+            <form action="{{ url_for('add_electronic') }}" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>When creating an Item, all fields except Version are mandatory.</b></p>
+                    </div>
+                    <div class="form-group; class=color:black;">
+                        <label >Make</label>
+                        <input type="text" pattern="[a-zA-Z\s0-9]+" class="form-control" id=make name="make" required="1" maxlength="50" placeholder="Apple">
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input type="text" pattern="[a-zA-Z\s0-9]+" class="form-control" id=type name="type" required="1" maxlength="50" placeholder="Phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Model</label>
+                        <input type="text" pattern="[a-zA-Z\s0-9.]+" class="form-control" id=model name="model" required="1" maxlength="50" placeholder="iPhone 13">
+                    </div>
+                    <div class="form-group">
+                        <label>Version</label>
+                        <input type="text" pattern="[a-zA-Z\s0-9\.]+" class="form-control" id=version name="version" maxlength="50" placeholder="Pro Max">
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" class="form-control" id="price" name="price" required="1" step=".01" min=".01" max="999999.99" placeholder="1299.99">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="addelectronicdata" class="btn btn-success">Save Electronic Data</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to add invoice that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is addinvoice in order to match the data-target in the add invoice button-->
+    <div class="modal fade" id="tableinformationmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Electronics Table Information</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is addinvoice in order to match the data-target in the addinvoice button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_invoice -->
+            <form action="" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>This table is used for records of Electronics that are for sale.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <p align="left"><b>When creating or updating an Item, all fields except Version are mandatory.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <p align="left"><b>At a minimum, one field must be entered for a search to work. The search works as an "AND" operation for all fields that have inputs.</b></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal to search electronic that is from https://getbootstrap.com/docs/4.0/components/modal/-->
+    <!-- The modal id is search electornic in order to match the data-target in the add customer button-->
+    <div class="modal fade" id="searchelectronicmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel" style="color:black;">Search Electronics</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <!-- The modal id is searchelectronic in order to match the data-target in the searchelectronic button-->
+            <!-- the mandatory fields in the database are required and the data is captured and routed to add_customer -->
+            <form action="{{ url_for('search_electronic') }}" method="POST">
+                <div class="modal-body" style="color:black">
+                    <div class="form-group">
+                        <p align="left"><b>At a minimum, one field must be entered for a search to work. The search works as an "AND" operation for all fields that have inputs.</b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Electronics ID</label>
+                        <input type="number" class="form-control" id="item_id" name="item_id" min="1" max="4294967295">
+                    </div>
+                    <div class="form-group">
+                        <label >Make</label>
+                        <input type="text" pattern="[a-zA-Z\s0-9]+" class="form-control" id=make name="make" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input type="text" pattern="[a-zA-Z\s0-9]+" class="form-control" id=type name="type"  maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Model</label>
+                        <input type="text" pattern="[a-zA-Z\s0-9.]+" class="form-control" id=model name="model" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Version</label>
+                        <input type="text" pattern="[a-zA-Z\s0-9\.]+" class="form-control" id=version name="version" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" class="form-control" id="price" name="price" step=".01">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="searchelectronics" class="btn btn-success">Search Electronics</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+{% endblock %}
+

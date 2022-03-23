@@ -1,0 +1,11 @@
+mysql_host: 'localhost'
+mysql_port: 3310
+mysql_user: 'root'
+mysql_password: '123456'
+mysql_db: 'electronic_store'
+
+# mysql_host: 'classmysql.engr.oregonstate.edu'
+# mysql_user: 'cs340_gunert'
+# mysql_password: '1257'
+# mysql_db: 'cs340_gunert'
+
