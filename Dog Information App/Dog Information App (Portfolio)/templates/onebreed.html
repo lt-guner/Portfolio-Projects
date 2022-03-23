@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Breed Results
+        </title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/dogstyling.css') }}">
+        <style>
+            br
+            {   content: "A" !important;
+                display: block !important;
+                margin-bottom: 1.5em !important;
+            }
+
+            .content {
+              display: flex;
+            }
+
+            .content img {
+              margin-right: 10px;
+              display: block;
+            }
+
+            .content h3,
+            .content p {margin-left: 150px; }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- header of website layout -->
+        <div class = "header">
+            <h1 style = "color:white;font-size:200%">
+                Dog Breed Information
+            </h1>
+        </div>
+
+        <!-- navigation menu of website layout -->
+        <div class = "nav_menu">
+            <a href = "{{ url_for('search') }}">Back</a>
+        </div>
+
+        <!-- Content section of website layout -->
+        <div class = "row">
+
+            <div class = "columnA">
+
+                <h2>{{ breedonedata[6] }}</h2>
+
+                <div class="content">
+                    <img src="{{ breedonedata[12] }}">
+                    <div class="text">
+                        <h3><strong>Characteristics</strong></h3>
+                        <p>Group: {{ breedonedata[10] }}</p>
+                        <p>Height: {{ breedonedata[7] }}</p>
+                        <p>Weight: {{ breedonedata[8]}}</p>
+                        <p>Life Expectancy: {{ breedonedata[9] }}</p>
+                    </div>
+                </div>
+
+                {{ breedonedata[0] | safe }}
+                <h2> Health</h2>
+                {{ breedonedata[1]  | safe }}
+                <h2> Grooming </h2>
+                {{ breedonedata[2] | safe }}
+                <h2> Exercise </h2>
+                {{ breedonedata[3] | safe }}
+                <h2> Training </h2>
+                {{ breedonedata[4]  | safe }}
+                <h2> Nutrition </h2>
+                {{ breedonedata[5]  | safe }}
+
+            </div>
+
+        </div>
+    </body>
+</html>

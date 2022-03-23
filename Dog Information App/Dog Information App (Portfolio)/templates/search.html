@@ -1,0 +1,1262 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Search Page
+        </title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/dogstyling.css') }}">
+
+        <style>
+
+         </style>
+    </head>
+
+    <body>
+
+        <!-- header of website layout -->
+        <div class = "header">
+            <h1 style = "color:white;font-size:200%;text-align: center;">
+                Dog Breed Information
+            </h1>
+        </div>
+
+        <!-- navigation menu of website layout -->
+        <div class = "nav_menu">
+            <a href = "{{ url_for('random') }}">Random Breed Selection</a>
+        </div>
+
+        <!-- Content section of website layout -->
+        <div class = "row">
+
+            <h1 style="color:black"> Welcome to the Dog Breed Information application. In this application you can select up to three
+            different dog breeds from dropdown menus and submit your search. It will then take you to a page to see information about the selected breeds. Below
+            is a list of dog breeds you can view by group type to help you determine the breed you would like to look at.</h1>
+        </div>
+
+        <div class="row">
+            <form action="{{ url_for('breeds') }}" method="POST">
+                <div class = "columnD">
+                    <h1>Select First Dog Breed</h1>
+                    <select id="bogbreedone" name="dogbreedone" required="1" style="width:350px;height:50px; font-size:20px;">
+                        <option value="" selected>N/A</option>
+                        <option value="affenpinscher">Affenpinscher</option>
+                        <option value="afghan-hound">Afghan Hound</option>
+                        <option value="airedale-terrier">Airedale Terrier</option>
+                        <option value="akita">Akita</option>
+                        <option value="alaskan-klee-kai">Alaskan Klee Kai</option>
+                        <option value="alaskan-malamute">Alaskan Malamute</option>
+                        <option value="american-bulldog">American Bulldog</option>
+                        <option value="american-english-coonhound">American English Coonhound</option>
+                        <option value="american-eskimo-dog">American Eskimo Dog</option>
+                        <option value="american-foxhound">American Foxhound</option>
+                        <option value="american-hairless-terrier">American Hairless Terrier</option>
+                        <option value="american-leopard-hound">American Leopard Hound</option>
+                        <option value="american-staffordshire-terrier">American Staffordshire Terrier</option>
+                        <option value="american-water-spaniel">American Water Spaniel</option>
+                        <option value="anatolian-shepherd-dog">Anatolian Shepherd Dog</option>
+                        <option value="appenzeller-sennenhund">Appenzeller Sennenhund</option>
+                        <option value="australian-cattle-dog">Australian Cattle Dog</option>
+                        <option value="australian-kelpie">Australian Kelpie</option>
+                        <option value="australian-shepherd">Australian Shepherd</option>
+                        <option value="australian-stumpy-tail-cattle-dog">Australian Stumpy Tail Cattle Dog</option>
+                        <option value="australian-terrier">Australian Terrier</option>
+                        <option value="azawakh">Azawakh</option>
+                        <option value="barbado-da-terceira">Barbado da Terceira</option>
+                        <option value="barbet">Barbet</option>
+                        <option value="basenji">Basenji</option>
+                        <option value="basset-fauve-de-bretagne">Basset Fauve de Bretagne</option>
+                        <option value="basset-hound">Basset Hound</option>
+                        <option value="bavarian-mountain-scent-hound">Bavarian Mountain Scent Hound</option>
+                        <option value="beagle">Beagle</option>
+                        <option value="bearded-collie">Bearded Collie</option>
+                        <option value="beauceron">Beauceron</option>
+                        <option value="bedlington-terrier">Bedlington Terrier</option>
+                        <option value="belgian-laekenois">Belgian Laekenois</option>
+                        <option value="belgian-malinois">Belgian Malinois</option>
+                        <option value="belgian-sheepdog">Belgian Sheepdog</option>
+                        <option value="belgian-tervuren">Belgian Tervuren</option>
+                        <option value="bergamasco-sheepdog">Bergamasco Sheepdog</option>
+                        <option value="berger-picard">Berger Picard</option>
+                        <option value="bernese-mountain-dog">Bernese Mountain Dog</option>
+                        <option value="bichon-frise">Bichon Frise</option>
+                        <option value="biewer-terrier">Biewer Terrier</option>
+                        <option value="black-and-tan-coonhound">Black and Tan Coonhound</option>
+                        <option value="black-russian-terrier">Black Russian Terrier</option>
+                        <option value="bloodhound">Bloodhound</option>
+                        <option value="bluetick-coonhound">Bluetick Coonhound</option>
+                        <option value="boerboel">Boerboel</option>
+                        <option value="bohemian-shepherd">Bohemian Shepherd</option>
+                        <option value="bolognese">Bolognese</option>
+                        <option value="border-collie">Border Collie</option>
+                        <option value="border-terrier">Border Terrier</option>
+                        <option value="borzoi">Borzoi</option>
+                        <option value="boston-terrier">Boston Terrier</option>
+                        <option value="bouvier-des-flandres">Bouvier des Flandres</option>
+                        <option value="boxer">Boxer</option>
+                        <option value="boykin-spaniel">Boykin Spaniel</option>
+                        <option value="bracco-italiano">Bracco Italiano</option>
+                        <option value="braque-du-bourbonnais">Braque du Bourbonnais</option>
+                        <option value="braque-francais-pyrenean">Braque Francais Pyrenean</option>
+                        <option value="briard">Briard</option>
+                        <option value="brittany">Brittany</option>
+                        <option value="broholmer">Broholmer</option>
+                        <option value="brussels-griffon">Brussels Griffon</option>
+                        <option value="bull-terrier">Bull Terrier</option>
+                        <option value="bulldog">Bulldog</option>
+                        <option value="bullmastiff">Bullmastiff</option>
+                        <option value="cairn-terrier">Cairn Terrier</option>
+                        <option value="canaan-dog">Canaan Dog</option>
+                        <option value="cane-corso">Cane Corso</option>
+                        <option value="cardigan-welsh-corgi">Cardigan Welsh Corgi</option>
+                        <option value="carolina-dog">Carolina Dog</option>
+                        <option value="catahoula-leopard-dog">Catahoula Leopard Dog</option>
+                        <option value="caucasian-shepherd-dog">Caucasian Shepherd Dog</option>
+                        <option value="cavalier-king-charles-spaniel">Cavalier King Charles Spaniel</option>
+                        <option value="central-asian-shepherd-dog">Central Asian Shepherd Dog</option>
+                        <option value="cesky-terrier">Cesky Terrier</option>
+                        <option value="chesapeake-bay-retriever">Chesapeake Bay Retriever</option>
+                        <option value="chihuahua">Chihuahua</option>
+                        <option value="chinese-crested">Chinese Crested</option>
+                        <option value="chinese-shar-pei">Chinese Shar-Pei</option>
+                        <option value="chinook">Chinook</option>
+                        <option value="chow-chow">Chow Chow</option>
+                        <option value="cirneco-delletna">Cirneco dell’Etna</option>
+                        <option value="clumber-spaniel">Clumber Spaniel</option>
+                        <option value="cocker-spaniel">Cocker Spaniel</option>
+                        <option value="collie">Collie</option>
+                        <option value="coton-de-tulear">Coton de Tulear</option>
+                        <option value="curly-coated-retriever">Curly-Coated Retriever</option>
+                        <option value="czechoslovakian-vlcak">Czechoslovakian Vlcak</option>
+                        <option value="dachshund">Dachshund</option>
+                        <option value="dalmatian">Dalmatian</option>
+                        <option value="dandie-dinmont-terrier">Dandie Dinmont Terrier</option>
+                        <option value="danish-swedish-farmdog">Danish-Swedish Farmdog</option>
+                        <option value="deutscher-wachtelhund">Deutscher Wachtelhund</option>
+                        <option value="doberman-pinscher">Doberman Pinscher</option>
+                        <option value="dogo-argentino">Dogo Argentino</option>
+                        <option value="dogue-de-bordeaux">Dogue de Bordeaux</option>
+                        <option value="drentsche-patrijshond">Drentsche Patrijshond</option>
+                        <option value="drever">Drever</option>
+                        <option value="dutch-shepherd">Dutch Shepherd</option>
+                        <option value="english-cocker-spaniel">English Cocker Spaniel</option>
+                        <option value="english-foxhound">English Foxhound</option>
+                        <option value="english-setter">English Setter</option>
+                        <option value="english-springer-spaniel">English Springer Spaniel</option>
+                        <option value="english-toy-spaniel">English Toy Spaniel</option>
+                        <option value="entlebucher-mountain-dog">Entlebucher Mountain Dog</option>
+                        <option value="estrela-mountain-dog">Estrela Mountain Dog</option>
+                        <option value="eurasier">Eurasier</option>
+                        <option value="field-spaniel">Field Spaniel</option>
+                        <option value="finnish-lapphund">Finnish Lapphund</option>
+                        <option value="finnish-spitz">Finnish Spitz</option>
+                        <option value="flat-coated-retriever">Flat-Coated Retriever</option>
+                        <option value="french-bulldog">French Bulldog</option>
+                        <option value="french-spaniel">French Spaniel</option>
+                        <option value="german-longhaired-pointer">German Longhaired Pointer</option>
+                        <option value="german-pinscher">German Pinscher</option>
+                        <option value="german-shepherd-dog">German Shepherd Dog</option>
+                        <option value="german-shorthaired-pointer">German Shorthaired Pointer</option>
+                        <option value="german-spitz">German Spitz</option>
+                        <option value="german-wirehaired-pointer">German Wirehaired Pointer</option>
+                        <option value="giant-schnauzer">Giant Schnauzer</option>
+                        <option value="glen-of-imaal-terrier">Glen of Imaal Terrier</option>
+                        <option value="golden-retriever">Golden Retriever</option>
+                        <option value="gordon-setter">Gordon Setter</option>
+                        <option value="grand-basset-griffon-vendeen">Grand Basset Griffon Vendeen</option>
+                        <option value="great-dane">Great Dane</option>
+                        <option value="great-pyrenees">Great Pyrenees</option>
+                        <option value="greater-swiss-mountain-dog">Greater Swiss Mountain Dog</option>
+                        <option value="greyhound">Greyhound</option>
+                        <option value="hamiltonstovare">Hamiltonstovare</option>
+                        <option value="hanoverian-scenthound">Hanoverian Scenthound</option>
+                        <option value="harrier">Harrier</option>
+                        <option value="havanese">Havanese</option>
+                        <option value="hokkaido">Hokkaido</option>
+                        <option value="hovawart">Hovawart</option>
+                        <option value="ibizan-hound">Ibizan Hound</option>
+                        <option value="icelandic-sheepdog">Icelandic Sheepdog</option>
+                        <option value="irish-red-and-white-setter">Irish Red and White Setter</option>
+                        <option value="irish-setter">Irish Setter</option>
+                        <option value="irish-terrier">Irish Terrier</option>
+                        <option value="irish-water-spaniel">Irish Water Spaniel</option>
+                        <option value="irish-wolfhound">Irish Wolfhound</option>
+                        <option value="italian-greyhound">Italian Greyhound</option>
+                        <option value="jagdterrier">Jagdterrier</option>
+                        <option value="japanese-akitainu">Japanese Akitainu</option>
+                        <option value="japanese-chin">Japanese Chin</option>
+                        <option value="japanese-spitz">Japanese Spitz</option>
+                        <option value="japanese-terrier">Japanese Terrier</option>
+                        <option value="jindo">Jindo</option>
+                        <option value="kai-ken">Kai Ken</option>
+                        <option value="karelian-bear-dog">Karelian Bear Dog</option>
+                        <option value="keeshond">Keeshond</option>
+                        <option value="kerry-blue-terrier">Kerry Blue Terrier</option>
+                        <option value="kishu-ken">Kishu Ken</option>
+                        <option value="komondor">Komondor</option>
+                        <option value="kromfohrlander">Kromfohrlander</option>
+                        <option value="kuvasz">Kuvasz</option>
+                        <option value="labrador-retriever">Labrador Retriever</option>
+                        <option value="lagotto-romagnolo">Lagotto Romagnolo</option>
+                        <option value="lakeland-terrier">Lakeland Terrier</option>
+                        <option value="lancashire-heeler">Lancashire Heeler</option>
+                        <option value="lapponian-herder">Lapponian Herder</option>
+                        <option value="leonberger">Leonberger</option>
+                        <option value="lhasa-apso">Lhasa Apso</option>
+                        <option value="lowchen">Lowchen</option>
+                        <option value="maltese">Maltese</option>
+                        <option value="manchester-terrier">Manchester Terrier</option>
+                        <option value="mastiff">Mastiff</option>
+                        <option value="miniature-american-shepherd">Miniature American Shepherd</option>
+                        <option value="miniature-bull-terrier">Miniature Bull Terrier</option>
+                        <option value="miniature-pinscher">Miniature Pinscher</option>
+                        <option value="poodle-miniature">Miniature Poodle</option>
+                        <option value="miniature-schnauzer">Miniature Schnauzer</option>
+                        <option value="mountain-cur">Mountain Cur</option>
+                        <option value="mudi">Mudi</option>
+                        <option value="neapolitan-mastiff">Neapolitan Mastiff</option>
+                        <option value="nederlandse-kooikerhondje">Nederlandse Kooikerhondje</option>
+                        <option value="newfoundland">Newfoundland</option>
+                        <option value="norfolk-terrier">Norfolk Terrier</option>
+                        <option value="norrbottenspets">Norrbottenspets</option>
+                        <option value="norwegian-buhund">Norwegian Buhund</option>
+                        <option value="norwegian-elkhound">Norwegian Elkhound</option>
+                        <option value="norwegian-lundehund">Norwegian Lundehund</option>
+                        <option value="norwich-terrier">Norwich Terrier</option>
+                        <option value="nova-scotia-duck-tolling-retriever">Nova Scotia Duck Tolling Retriever</option>
+                        <option value="old-english-sheepdog">Old English Sheepdog</option>
+                        <option value="otterhound">Otterhound</option>
+                        <option value="papillon">Papillon</option>
+                        <option value="parson-russell-terrier">Parson Russell Terrier</option>
+                        <option value="pekingese">Pekingese</option>
+                        <option value="pembroke-welsh-corgi">Pembroke Welsh Corgi</option>
+                        <option value="perro-de-presa-canario">Perro de Presa Canario</option>
+                        <option value="peruvian-inca-orchid">Peruvian Inca Orchid</option>
+                        <option value="petit-basset-griffon-vendeen">Petit Basset Griffon Vendeen</option>
+                        <option value="pharaoh-hound">Pharaoh Hound</option>
+                        <option value="plott-hound">Plott Hound</option>
+                        <option value="pointer">Pointer</option>
+                        <option value="polish-lowland-sheepdog">Polish Lowland Sheepdog</option>
+                        <option value="pomeranian">Pomeranian</option>
+                        <option value="porcelaine">Porcelaine</option>
+                        <option value="portuguese-podengo">Portuguese Podengo</option>
+                        <option value="portuguese-podengo-pequeno">Portuguese Podengo Pequeno</option>
+                        <option value="portuguese-pointer">Portuguese Pointer</option>
+                        <option value="portuguese-sheepdog">Portuguese Sheepdog</option>
+                        <option value="portuguese-water-dog">Portuguese Water Dog</option>
+                        <option value="pudelpointer">Pudelpointer</option>
+                        <option value="pug">Pug</option>
+                        <option value="puli">Puli</option>
+                        <option value="pumi">Pumi</option>
+                        <option value="pyrenean-mastiff">Pyrenean Mastiff</option>
+                        <option value="pyrenean-shepherd">Pyrenean Shepherd</option>
+                        <option value="rafeiro-do-alentejo">Rafeiro do Alentejo</option>
+                        <option value="rat-terrier">Rat Terrier</option>
+                        <option value="redbone-coonhound">Redbone Coonhound</option>
+                        <option value="rhodesian-ridgeback">Rhodesian Ridgeback</option>
+                        <option value="romanian-mioritic-shepherd-dog">Romanian Mioritic Shepherd Dog</option>
+                        <option value="rottweiler">Rottweiler</option>
+                        <option value="russell-terrier">Russell Terrier</option>
+                        <option value="russian-toy">Russian Toy</option>
+                        <option value="russian-tsvetnaya-bolonka">Russian Tsvetnaya Bolonka</option>
+                        <option value="saint-bernard">Saint Bernard</option>
+                        <option value="saluki">Saluki</option>
+                        <option value="samoyed">Samoyed</option>
+                        <option value="schapendoes">Schapendoes</option>
+                        <option value="schipperke">Schipperke</option>
+                        <option value="scottish-deerhound">Scottish Deerhound</option>
+                        <option value="scottish-terrier">Scottish Terrier</option>
+                        <option value="sealyham-terrier">Sealyham Terrier</option>
+                        <option value="segugio-italiano">Segugio Italiano</option>
+                        <option value="shetland-sheepdog">Shetland Sheepdog</option>
+                        <option value="shiba-inu">Shiba Inu</option>
+                        <option value="shih-tzu">Shih Tzu</option>
+                        <option value="shikoku">Shikoku</option>
+                        <option value="siberian-husky">Siberian Husky</option>
+                        <option value="silky-terrier">Silky Terrier</option>
+                        <option value="sloughi">Sloughi</option>
+                        <option value="slovakian-wirehaired-pointer">Slovakian Wirehaired Pointer</option>
+                        <option value="slovensky-cuvac">Slovensky Cuvac</option>
+                        <option value="slovensky-kopov">Slovensky Kopov</option>
+                        <option value="small-munsterlander">Small Munsterlander</option>
+                        <option value="spanish-mastiff">Spanish Mastiff</option>
+                        <option value="spanish-water-dog">Spanish Water Dog</option>
+                        <option value="spinone-italiano">Spinone Italiano</option>
+                        <option value="stabyhoun">Stabyhoun</option>
+                        <option value="poodle-standard">Standard Poodle</option>
+                        <option value="standard-schnauzer">Standard Schnauzer</option>
+                        <option value="sussex-spaniel">Sussex Spaniel</option>
+                        <option value="swedish-lapphund">Swedish Lapphund</option>
+                        <option value="swedish-vallhund">Swedish Vallhund</option>
+                        <option value="taiwan-dog">Taiwan Dog</option>
+                        <option value="teddy-roosevelt-terrier">Teddy Roosevelt Terrier</option>
+                        <option value="thai-ridgeback">Thai Ridgeback</option>
+                        <option value="tibetan-mastiff">Tibetan Mastiff</option>
+                        <option value="tibetan-spaniel">Tibetan Spaniel</option>
+                        <option value="tibetan-terrier">Tibetan Terrier</option>
+                        <option value="tornjak">Tornjak</option>
+                        <option value="tosa">Tosa</option>
+                        <option value="toy-fox-terrier">Toy Fox Terrier</option>
+                        <option value="poodle-toy">Toy Poodle</option>
+                        <option value="transylvanian-hound">Transylvanian Hound</option>
+                        <option value="treeing-tennessee-brindle">Treeing Tennessee Brindle</option>
+                        <option value="treeing-walker-coonhound">Treeing Walker Coonhound</option>
+                        <option value="vizsla">Vizsla</option>
+                        <option value="volpino-italiano">Volpino Italiano</option>
+                        <option value="weimaraner">Weimaraner</option>
+                        <option value="welsh-springer-spaniel">Welsh Springer Spaniel</option>
+                        <option value="wetterhoun">Wetterhoun</option>
+                        <option value="whippet">Whippet</option>
+                        <option value="wirehaired-pointing-griffon">Wirehaired Pointing Griffon</option>
+                        <option value="wirehaired-vizsla">Wirehaired Vizsla</option>
+                        <option value="working-kelpie">Working Kelpie</option>
+                        <option value="xoloitzcuintli">Xoloitzcuintli</option>
+                        <option value="yakutian-laika">Yakutian Laika</option>
+                        <option value="yorkshire-terrier">Yorkshire Terrier</option>
+                    </select>
+                </div>
+
+                <div class = "columnE">
+                    <h1>Select Second Dog Breed</h1>
+                    <select id="bogbreedtwo" name="dogbreedtwo" style="width:350px;height:50px; font-size:20px;">
+                        <option value="n/a" selected>N/A</option>
+                        <option value="affenpinscher">Affenpinscher</option>
+                        <option value="afghan-hound">Afghan Hound</option>
+                        <option value="airedale-terrier">Airedale Terrier</option>
+                        <option value="akita">Akita</option>
+                        <option value="alaskan-klee-kai">Alaskan Klee Kai</option>
+                        <option value="alaskan-malamute">Alaskan Malamute</option>
+                        <option value="american-bulldog">American Bulldog</option>
+                        <option value="american-english-coonhound">American English Coonhound</option>
+                        <option value="american-eskimo-dog">American Eskimo Dog</option>
+                        <option value="american-foxhound">American Foxhound</option>
+                        <option value="american-hairless-terrier">American Hairless Terrier</option>
+                        <option value="american-leopard-hound">American Leopard Hound</option>
+                        <option value="american-staffordshire-terrier">American Staffordshire Terrier</option>
+                        <option value="american-water-spaniel">American Water Spaniel</option>
+                        <option value="anatolian-shepherd-dog">Anatolian Shepherd Dog</option>
+                        <option value="appenzeller-sennenhund">Appenzeller Sennenhund</option>
+                        <option value="australian-cattle-dog">Australian Cattle Dog</option>
+                        <option value="australian-kelpie">Australian Kelpie</option>
+                        <option value="australian-shepherd">Australian Shepherd</option>
+                        <option value="australian-stumpy-tail-cattle-dog">Australian Stumpy Tail Cattle Dog</option>
+                        <option value="australian-terrier">Australian Terrier</option>
+                        <option value="azawakh">Azawakh</option>
+                        <option value="barbado-da-terceira">Barbado da Terceira</option>
+                        <option value="barbet">Barbet</option>
+                        <option value="basenji">Basenji</option>
+                        <option value="basset-fauve-de-bretagne">Basset Fauve de Bretagne</option>
+                        <option value="basset-hound">Basset Hound</option>
+                        <option value="bavarian-mountain-scent-hound">Bavarian Mountain Scent Hound</option>
+                        <option value="beagle">Beagle</option>
+                        <option value="bearded-collie">Bearded Collie</option>
+                        <option value="beauceron">Beauceron</option>
+                        <option value="bedlington-terrier">Bedlington Terrier</option>
+                        <option value="belgian-laekenois">Belgian Laekenois</option>
+                        <option value="belgian-malinois">Belgian Malinois</option>
+                        <option value="belgian-sheepdog">Belgian Sheepdog</option>
+                        <option value="belgian-tervuren">Belgian Tervuren</option>
+                        <option value="bergamasco-sheepdog">Bergamasco Sheepdog</option>
+                        <option value="berger-picard">Berger Picard</option>
+                        <option value="bernese-mountain-dog">Bernese Mountain Dog</option>
+                        <option value="bichon-frise">Bichon Frise</option>
+                        <option value="biewer-terrier">Biewer Terrier</option>
+                        <option value="black-and-tan-coonhound">Black and Tan Coonhound</option>
+                        <option value="black-russian-terrier">Black Russian Terrier</option>
+                        <option value="bloodhound">Bloodhound</option>
+                        <option value="bluetick-coonhound">Bluetick Coonhound</option>
+                        <option value="boerboel">Boerboel</option>
+                        <option value="bohemian-shepherd">Bohemian Shepherd</option>
+                        <option value="bolognese">Bolognese</option>
+                        <option value="border-collie">Border Collie</option>
+                        <option value="border-terrier">Border Terrier</option>
+                        <option value="borzoi">Borzoi</option>
+                        <option value="boston-terrier">Boston Terrier</option>
+                        <option value="bouvier-des-flandres">Bouvier des Flandres</option>
+                        <option value="boxer">Boxer</option>
+                        <option value="boykin-spaniel">Boykin Spaniel</option>
+                        <option value="bracco-italiano">Bracco Italiano</option>
+                        <option value="braque-du-bourbonnais">Braque du Bourbonnais</option>
+                        <option value="braque-francais-pyrenean">Braque Francais Pyrenean</option>
+                        <option value="briard">Briard</option>
+                        <option value="brittany">Brittany</option>
+                        <option value="broholmer">Broholmer</option>
+                        <option value="brussels-griffon">Brussels Griffon</option>
+                        <option value="bull-terrier">Bull Terrier</option>
+                        <option value="bulldog">Bulldog</option>
+                        <option value="bullmastiff">Bullmastiff</option>
+                        <option value="cairn-terrier">Cairn Terrier</option>
+                        <option value="canaan-dog">Canaan Dog</option>
+                        <option value="cane-corso">Cane Corso</option>
+                        <option value="cardigan-welsh-corgi">Cardigan Welsh Corgi</option>
+                        <option value="carolina-dog">Carolina Dog</option>
+                        <option value="catahoula-leopard-dog">Catahoula Leopard Dog</option>
+                        <option value="caucasian-shepherd-dog">Caucasian Shepherd Dog</option>
+                        <option value="cavalier-king-charles-spaniel">Cavalier King Charles Spaniel</option>
+                        <option value="central-asian-shepherd-dog">Central Asian Shepherd Dog</option>
+                        <option value="cesky-terrier">Cesky Terrier</option>
+                        <option value="chesapeake-bay-retriever">Chesapeake Bay Retriever</option>
+                        <option value="chihuahua">Chihuahua</option>
+                        <option value="chinese-crested">Chinese Crested</option>
+                        <option value="chinese-shar-pei">Chinese Shar-Pei</option>
+                        <option value="chinook">Chinook</option>
+                        <option value="chow-chow">Chow Chow</option>
+                        <option value="cirneco-delletna">Cirneco dell’Etna</option>
+                        <option value="clumber-spaniel">Clumber Spaniel</option>
+                        <option value="cocker-spaniel">Cocker Spaniel</option>
+                        <option value="collie">Collie</option>
+                        <option value="coton-de-tulear">Coton de Tulear</option>
+                        <option value="curly-coated-retriever">Curly-Coated Retriever</option>
+                        <option value="czechoslovakian-vlcak">Czechoslovakian Vlcak</option>
+                        <option value="dachshund">Dachshund</option>
+                        <option value="dalmatian">Dalmatian</option>
+                        <option value="dandie-dinmont-terrier">Dandie Dinmont Terrier</option>
+                        <option value="danish-swedish-farmdog">Danish-Swedish Farmdog</option>
+                        <option value="deutscher-wachtelhund">Deutscher Wachtelhund</option>
+                        <option value="doberman-pinscher">Doberman Pinscher</option>
+                        <option value="dogo-argentino">Dogo Argentino</option>
+                        <option value="dogue-de-bordeaux">Dogue de Bordeaux</option>
+                        <option value="drentsche-patrijshond">Drentsche Patrijshond</option>
+                        <option value="drever">Drever</option>
+                        <option value="dutch-shepherd">Dutch Shepherd</option>
+                        <option value="english-cocker-spaniel">English Cocker Spaniel</option>
+                        <option value="english-foxhound">English Foxhound</option>
+                        <option value="english-setter">English Setter</option>
+                        <option value="english-springer-spaniel">English Springer Spaniel</option>
+                        <option value="english-toy-spaniel">English Toy Spaniel</option>
+                        <option value="entlebucher-mountain-dog">Entlebucher Mountain Dog</option>
+                        <option value="estrela-mountain-dog">Estrela Mountain Dog</option>
+                        <option value="eurasier">Eurasier</option>
+                        <option value="field-spaniel">Field Spaniel</option>
+                        <option value="finnish-lapphund">Finnish Lapphund</option>
+                        <option value="finnish-spitz">Finnish Spitz</option>
+                        <option value="flat-coated-retriever">Flat-Coated Retriever</option>
+                        <option value="french-bulldog">French Bulldog</option>
+                        <option value="french-spaniel">French Spaniel</option>
+                        <option value="german-longhaired-pointer">German Longhaired Pointer</option>
+                        <option value="german-pinscher">German Pinscher</option>
+                        <option value="german-shepherd-dog">German Shepherd Dog</option>
+                        <option value="german-shorthaired-pointer">German Shorthaired Pointer</option>
+                        <option value="german-spitz">German Spitz</option>
+                        <option value="german-wirehaired-pointer">German Wirehaired Pointer</option>
+                        <option value="giant-schnauzer">Giant Schnauzer</option>
+                        <option value="glen-of-imaal-terrier">Glen of Imaal Terrier</option>
+                        <option value="golden-retriever">Golden Retriever</option>
+                        <option value="gordon-setter">Gordon Setter</option>
+                        <option value="grand-basset-griffon-vendeen">Grand Basset Griffon Vendeen</option>
+                        <option value="great-dane">Great Dane</option>
+                        <option value="great-pyrenees">Great Pyrenees</option>
+                        <option value="greater-swiss-mountain-dog">Greater Swiss Mountain Dog</option>
+                        <option value="greyhound">Greyhound</option>
+                        <option value="hamiltonstovare">Hamiltonstovare</option>
+                        <option value="hanoverian-scenthound">Hanoverian Scenthound</option>
+                        <option value="harrier">Harrier</option>
+                        <option value="havanese">Havanese</option>
+                        <option value="hokkaido">Hokkaido</option>
+                        <option value="hovawart">Hovawart</option>
+                        <option value="ibizan-hound">Ibizan Hound</option>
+                        <option value="icelandic-sheepdog">Icelandic Sheepdog</option>
+                        <option value="irish-red-and-white-setter">Irish Red and White Setter</option>
+                        <option value="irish-setter">Irish Setter</option>
+                        <option value="irish-terrier">Irish Terrier</option>
+                        <option value="irish-water-spaniel">Irish Water Spaniel</option>
+                        <option value="irish-wolfhound">Irish Wolfhound</option>
+                        <option value="italian-greyhound">Italian Greyhound</option>
+                        <option value="jagdterrier">Jagdterrier</option>
+                        <option value="japanese-akitainu">Japanese Akitainu</option>
+                        <option value="japanese-chin">Japanese Chin</option>
+                        <option value="japanese-spitz">Japanese Spitz</option>
+                        <option value="japanese-terrier">Japanese Terrier</option>
+                        <option value="jindo">Jindo</option>
+                        <option value="kai-ken">Kai Ken</option>
+                        <option value="karelian-bear-dog">Karelian Bear Dog</option>
+                        <option value="keeshond">Keeshond</option>
+                        <option value="kerry-blue-terrier">Kerry Blue Terrier</option>
+                        <option value="kishu-ken">Kishu Ken</option>
+                        <option value="komondor">Komondor</option>
+                        <option value="kromfohrlander">Kromfohrlander</option>
+                        <option value="kuvasz">Kuvasz</option>
+                        <option value="labrador-retriever">Labrador Retriever</option>
+                        <option value="lagotto-romagnolo">Lagotto Romagnolo</option>
+                        <option value="lakeland-terrier">Lakeland Terrier</option>
+                        <option value="lancashire-heeler">Lancashire Heeler</option>
+                        <option value="lapponian-herder">Lapponian Herder</option>
+                        <option value="leonberger">Leonberger</option>
+                        <option value="lhasa-apso">Lhasa Apso</option>
+                        <option value="lowchen">Lowchen</option>
+                        <option value="maltese">Maltese</option>
+                        <option value="manchester-terrier">Manchester Terrier</option>
+                        <option value="mastiff">Mastiff</option>
+                        <option value="miniature-american-shepherd">Miniature American Shepherd</option>
+                        <option value="miniature-bull-terrier">Miniature Bull Terrier</option>
+                        <option value="miniature-pinscher">Miniature Pinscher</option>
+                        <option value="poodle-miniature">Miniature Poodle</option>
+                        <option value="miniature-schnauzer">Miniature Schnauzer</option>
+                        <option value="mountain-cur">Mountain Cur</option>
+                        <option value="mudi">Mudi</option>
+                        <option value="neapolitan-mastiff">Neapolitan Mastiff</option>
+                        <option value="nederlandse-kooikerhondje">Nederlandse Kooikerhondje</option>
+                        <option value="newfoundland">Newfoundland</option>
+                        <option value="norfolk-terrier">Norfolk Terrier</option>
+                        <option value="norrbottenspets">Norrbottenspets</option>
+                        <option value="norwegian-buhund">Norwegian Buhund</option>
+                        <option value="norwegian-elkhound">Norwegian Elkhound</option>
+                        <option value="norwegian-lundehund">Norwegian Lundehund</option>
+                        <option value="norwich-terrier">Norwich Terrier</option>
+                        <option value="nova-scotia-duck-tolling-retriever">Nova Scotia Duck Tolling Retriever</option>
+                        <option value="old-english-sheepdog">Old English Sheepdog</option>
+                        <option value="otterhound">Otterhound</option>
+                        <option value="papillon">Papillon</option>
+                        <option value="parson-russell-terrier">Parson Russell Terrier</option>
+                        <option value="pekingese">Pekingese</option>
+                        <option value="pembroke-welsh-corgi">Pembroke Welsh Corgi</option>
+                        <option value="perro-de-presa-canario">Perro de Presa Canario</option>
+                        <option value="peruvian-inca-orchid">Peruvian Inca Orchid</option>
+                        <option value="petit-basset-griffon-vendeen">Petit Basset Griffon Vendeen</option>
+                        <option value="pharaoh-hound">Pharaoh Hound</option>
+                        <option value="plott-hound">Plott Hound</option>
+                        <option value="pointer">Pointer</option>
+                        <option value="polish-lowland-sheepdog">Polish Lowland Sheepdog</option>
+                        <option value="pomeranian">Pomeranian</option>
+                        <option value="porcelaine">Porcelaine</option>
+                        <option value="portuguese-podengo">Portuguese Podengo</option>
+                        <option value="portuguese-podengo-pequeno">Portuguese Podengo Pequeno</option>
+                        <option value="portuguese-pointer">Portuguese Pointer</option>
+                        <option value="portuguese-sheepdog">Portuguese Sheepdog</option>
+                        <option value="portuguese-water-dog">Portuguese Water Dog</option>
+                        <option value="pudelpointer">Pudelpointer</option>
+                        <option value="pug">Pug</option>
+                        <option value="puli">Puli</option>
+                        <option value="pumi">Pumi</option>
+                        <option value="pyrenean-mastiff">Pyrenean Mastiff</option>
+                        <option value="pyrenean-shepherd">Pyrenean Shepherd</option>
+                        <option value="rafeiro-do-alentejo">Rafeiro do Alentejo</option>
+                        <option value="rat-terrier">Rat Terrier</option>
+                        <option value="redbone-coonhound">Redbone Coonhound</option>
+                        <option value="rhodesian-ridgeback">Rhodesian Ridgeback</option>
+                        <option value="romanian-mioritic-shepherd-dog">Romanian Mioritic Shepherd Dog</option>
+                        <option value="rottweiler">Rottweiler</option>
+                        <option value="russell-terrier">Russell Terrier</option>
+                        <option value="russian-toy">Russian Toy</option>
+                        <option value="russian-tsvetnaya-bolonka">Russian Tsvetnaya Bolonka</option>
+                        <option value="saint-bernard">Saint Bernard</option>
+                        <option value="saluki">Saluki</option>
+                        <option value="samoyed">Samoyed</option>
+                        <option value="schapendoes">Schapendoes</option>
+                        <option value="schipperke">Schipperke</option>
+                        <option value="scottish-deerhound">Scottish Deerhound</option>
+                        <option value="scottish-terrier">Scottish Terrier</option>
+                        <option value="sealyham-terrier">Sealyham Terrier</option>
+                        <option value="segugio-italiano">Segugio Italiano</option>
+                        <option value="shetland-sheepdog">Shetland Sheepdog</option>
+                        <option value="shiba-inu">Shiba Inu</option>
+                        <option value="shih-tzu">Shih Tzu</option>
+                        <option value="shikoku">Shikoku</option>
+                        <option value="siberian-husky">Siberian Husky</option>
+                        <option value="silky-terrier">Silky Terrier</option>
+                        <option value="sloughi">Sloughi</option>
+                        <option value="slovakian-wirehaired-pointer">Slovakian Wirehaired Pointer</option>
+                        <option value="slovensky-cuvac">Slovensky Cuvac</option>
+                        <option value="slovensky-kopov">Slovensky Kopov</option>
+                        <option value="small-munsterlander">Small Munsterlander</option>
+                        <option value="spanish-mastiff">Spanish Mastiff</option>
+                        <option value="spanish-water-dog">Spanish Water Dog</option>
+                        <option value="spinone-italiano">Spinone Italiano</option>
+                        <option value="stabyhoun">Stabyhoun</option>
+                        <option value="poodle-standard">Standard Poodle</option>
+                        <option value="standard-schnauzer">Standard Schnauzer</option>
+                        <option value="sussex-spaniel">Sussex Spaniel</option>
+                        <option value="swedish-lapphund">Swedish Lapphund</option>
+                        <option value="swedish-vallhund">Swedish Vallhund</option>
+                        <option value="taiwan-dog">Taiwan Dog</option>
+                        <option value="teddy-roosevelt-terrier">Teddy Roosevelt Terrier</option>
+                        <option value="thai-ridgeback">Thai Ridgeback</option>
+                        <option value="tibetan-mastiff">Tibetan Mastiff</option>
+                        <option value="tibetan-spaniel">Tibetan Spaniel</option>
+                        <option value="tibetan-terrier">Tibetan Terrier</option>
+                        <option value="tornjak">Tornjak</option>
+                        <option value="tosa">Tosa</option>
+                        <option value="toy-fox-terrier">Toy Fox Terrier</option>
+                        <option value="poodle-toy">Toy Poodle</option>
+                        <option value="transylvanian-hound">Transylvanian Hound</option>
+                        <option value="treeing-tennessee-brindle">Treeing Tennessee Brindle</option>
+                        <option value="treeing-walker-coonhound">Treeing Walker Coonhound</option>
+                        <option value="vizsla">Vizsla</option>
+                        <option value="volpino-italiano">Volpino Italiano</option>
+                        <option value="weimaraner">Weimaraner</option>
+                        <option value="welsh-springer-spaniel">Welsh Springer Spaniel</option>
+                        <option value="wetterhoun">Wetterhoun</option>
+                        <option value="whippet">Whippet</option>
+                        <option value="wirehaired-pointing-griffon">Wirehaired Pointing Griffon</option>
+                        <option value="wirehaired-vizsla">Wirehaired Vizsla</option>
+                        <option value="working-kelpie">Working Kelpie</option>
+                        <option value="xoloitzcuintli">Xoloitzcuintli</option>
+                        <option value="yakutian-laika">Yakutian Laika</option>
+                        <option value="yorkshire-terrier">Yorkshire Terrier</option>
+                    </select>
+                </div>
+
+                <div class = "columnF">
+                    <h1>Select Third Dog Breed</h1>
+                    <select id="bogbreedthree" name="dogbreedthree" style="width:350px;height:50px; font-size:20px;">
+                        <option value="n/a" selected>N/A</option>
+                        <option value="affenpinscher">Affenpinscher</option>
+                        <option value="afghan-hound">Afghan Hound</option>
+                        <option value="airedale-terrier">Airedale Terrier</option>
+                        <option value="akita">Akita</option>
+                        <option value="alaskan-klee-kai">Alaskan Klee Kai</option>
+                        <option value="alaskan-malamute">Alaskan Malamute</option>
+                        <option value="american-bulldog">American Bulldog</option>
+                        <option value="american-english-coonhound">American English Coonhound</option>
+                        <option value="american-eskimo-dog">American Eskimo Dog</option>
+                        <option value="american-foxhound">American Foxhound</option>
+                        <option value="american-hairless-terrier">American Hairless Terrier</option>
+                        <option value="american-leopard-hound">American Leopard Hound</option>
+                        <option value="american-staffordshire-terrier">American Staffordshire Terrier</option>
+                        <option value="american-water-spaniel">American Water Spaniel</option>
+                        <option value="anatolian-shepherd-dog">Anatolian Shepherd Dog</option>
+                        <option value="appenzeller-sennenhund">Appenzeller Sennenhund</option>
+                        <option value="australian-cattle-dog">Australian Cattle Dog</option>
+                        <option value="australian-kelpie">Australian Kelpie</option>
+                        <option value="australian-shepherd">Australian Shepherd</option>
+                        <option value="australian-stumpy-tail-cattle-dog">Australian Stumpy Tail Cattle Dog</option>
+                        <option value="australian-terrier">Australian Terrier</option>
+                        <option value="azawakh">Azawakh</option>
+                        <option value="barbado-da-terceira">Barbado da Terceira</option>
+                        <option value="barbet">Barbet</option>
+                        <option value="basenji">Basenji</option>
+                        <option value="basset-fauve-de-bretagne">Basset Fauve de Bretagne</option>
+                        <option value="basset-hound">Basset Hound</option>
+                        <option value="bavarian-mountain-scent-hound">Bavarian Mountain Scent Hound</option>
+                        <option value="beagle">Beagle</option>
+                        <option value="bearded-collie">Bearded Collie</option>
+                        <option value="beauceron">Beauceron</option>
+                        <option value="bedlington-terrier">Bedlington Terrier</option>
+                        <option value="belgian-laekenois">Belgian Laekenois</option>
+                        <option value="belgian-malinois">Belgian Malinois</option>
+                        <option value="belgian-sheepdog">Belgian Sheepdog</option>
+                        <option value="belgian-tervuren">Belgian Tervuren</option>
+                        <option value="bergamasco-sheepdog">Bergamasco Sheepdog</option>
+                        <option value="berger-picard">Berger Picard</option>
+                        <option value="bernese-mountain-dog">Bernese Mountain Dog</option>
+                        <option value="bichon-frise">Bichon Frise</option>
+                        <option value="biewer-terrier">Biewer Terrier</option>
+                        <option value="black-and-tan-coonhound">Black and Tan Coonhound</option>
+                        <option value="black-russian-terrier">Black Russian Terrier</option>
+                        <option value="bloodhound">Bloodhound</option>
+                        <option value="bluetick-coonhound">Bluetick Coonhound</option>
+                        <option value="boerboel">Boerboel</option>
+                        <option value="bohemian-shepherd">Bohemian Shepherd</option>
+                        <option value="bolognese">Bolognese</option>
+                        <option value="border-collie">Border Collie</option>
+                        <option value="border-terrier">Border Terrier</option>
+                        <option value="borzoi">Borzoi</option>
+                        <option value="boston-terrier">Boston Terrier</option>
+                        <option value="bouvier-des-flandres">Bouvier des Flandres</option>
+                        <option value="boxer">Boxer</option>
+                        <option value="boykin-spaniel">Boykin Spaniel</option>
+                        <option value="bracco-italiano">Bracco Italiano</option>
+                        <option value="braque-du-bourbonnais">Braque du Bourbonnais</option>
+                        <option value="braque-francais-pyrenean">Braque Francais Pyrenean</option>
+                        <option value="briard">Briard</option>
+                        <option value="brittany">Brittany</option>
+                        <option value="broholmer">Broholmer</option>
+                        <option value="brussels-griffon">Brussels Griffon</option>
+                        <option value="bull-terrier">Bull Terrier</option>
+                        <option value="bulldog">Bulldog</option>
+                        <option value="bullmastiff">Bullmastiff</option>
+                        <option value="cairn-terrier">Cairn Terrier</option>
+                        <option value="canaan-dog">Canaan Dog</option>
+                        <option value="cane-corso">Cane Corso</option>
+                        <option value="cardigan-welsh-corgi">Cardigan Welsh Corgi</option>
+                        <option value="carolina-dog">Carolina Dog</option>
+                        <option value="catahoula-leopard-dog">Catahoula Leopard Dog</option>
+                        <option value="caucasian-shepherd-dog">Caucasian Shepherd Dog</option>
+                        <option value="cavalier-king-charles-spaniel">Cavalier King Charles Spaniel</option>
+                        <option value="central-asian-shepherd-dog">Central Asian Shepherd Dog</option>
+                        <option value="cesky-terrier">Cesky Terrier</option>
+                        <option value="chesapeake-bay-retriever">Chesapeake Bay Retriever</option>
+                        <option value="chihuahua">Chihuahua</option>
+                        <option value="chinese-crested">Chinese Crested</option>
+                        <option value="chinese-shar-pei">Chinese Shar-Pei</option>
+                        <option value="chinook">Chinook</option>
+                        <option value="chow-chow">Chow Chow</option>
+                        <option value="cirneco-delletna">Cirneco dell’Etna</option>
+                        <option value="clumber-spaniel">Clumber Spaniel</option>
+                        <option value="cocker-spaniel">Cocker Spaniel</option>
+                        <option value="collie">Collie</option>
+                        <option value="coton-de-tulear">Coton de Tulear</option>
+                        <option value="curly-coated-retriever">Curly-Coated Retriever</option>
+                        <option value="czechoslovakian-vlcak">Czechoslovakian Vlcak</option>
+                        <option value="dachshund">Dachshund</option>
+                        <option value="dalmatian">Dalmatian</option>
+                        <option value="dandie-dinmont-terrier">Dandie Dinmont Terrier</option>
+                        <option value="danish-swedish-farmdog">Danish-Swedish Farmdog</option>
+                        <option value="deutscher-wachtelhund">Deutscher Wachtelhund</option>
+                        <option value="doberman-pinscher">Doberman Pinscher</option>
+                        <option value="dogo-argentino">Dogo Argentino</option>
+                        <option value="dogue-de-bordeaux">Dogue de Bordeaux</option>
+                        <option value="drentsche-patrijshond">Drentsche Patrijshond</option>
+                        <option value="drever">Drever</option>
+                        <option value="dutch-shepherd">Dutch Shepherd</option>
+                        <option value="english-cocker-spaniel">English Cocker Spaniel</option>
+                        <option value="english-foxhound">English Foxhound</option>
+                        <option value="english-setter">English Setter</option>
+                        <option value="english-springer-spaniel">English Springer Spaniel</option>
+                        <option value="english-toy-spaniel">English Toy Spaniel</option>
+                        <option value="entlebucher-mountain-dog">Entlebucher Mountain Dog</option>
+                        <option value="estrela-mountain-dog">Estrela Mountain Dog</option>
+                        <option value="eurasier">Eurasier</option>
+                        <option value="field-spaniel">Field Spaniel</option>
+                        <option value="finnish-lapphund">Finnish Lapphund</option>
+                        <option value="finnish-spitz">Finnish Spitz</option>
+                        <option value="flat-coated-retriever">Flat-Coated Retriever</option>
+                        <option value="french-bulldog">French Bulldog</option>
+                        <option value="french-spaniel">French Spaniel</option>
+                        <option value="german-longhaired-pointer">German Longhaired Pointer</option>
+                        <option value="german-pinscher">German Pinscher</option>
+                        <option value="german-shepherd-dog">German Shepherd Dog</option>
+                        <option value="german-shorthaired-pointer">German Shorthaired Pointer</option>
+                        <option value="german-spitz">German Spitz</option>
+                        <option value="german-wirehaired-pointer">German Wirehaired Pointer</option>
+                        <option value="giant-schnauzer">Giant Schnauzer</option>
+                        <option value="glen-of-imaal-terrier">Glen of Imaal Terrier</option>
+                        <option value="golden-retriever">Golden Retriever</option>
+                        <option value="gordon-setter">Gordon Setter</option>
+                        <option value="grand-basset-griffon-vendeen">Grand Basset Griffon Vendeen</option>
+                        <option value="great-dane">Great Dane</option>
+                        <option value="great-pyrenees">Great Pyrenees</option>
+                        <option value="greater-swiss-mountain-dog">Greater Swiss Mountain Dog</option>
+                        <option value="greyhound">Greyhound</option>
+                        <option value="hamiltonstovare">Hamiltonstovare</option>
+                        <option value="hanoverian-scenthound">Hanoverian Scenthound</option>
+                        <option value="harrier">Harrier</option>
+                        <option value="havanese">Havanese</option>
+                        <option value="hokkaido">Hokkaido</option>
+                        <option value="hovawart">Hovawart</option>
+                        <option value="ibizan-hound">Ibizan Hound</option>
+                        <option value="icelandic-sheepdog">Icelandic Sheepdog</option>
+                        <option value="irish-red-and-white-setter">Irish Red and White Setter</option>
+                        <option value="irish-setter">Irish Setter</option>
+                        <option value="irish-terrier">Irish Terrier</option>
+                        <option value="irish-water-spaniel">Irish Water Spaniel</option>
+                        <option value="irish-wolfhound">Irish Wolfhound</option>
+                        <option value="italian-greyhound">Italian Greyhound</option>
+                        <option value="jagdterrier">Jagdterrier</option>
+                        <option value="japanese-akitainu">Japanese Akitainu</option>
+                        <option value="japanese-chin">Japanese Chin</option>
+                        <option value="japanese-spitz">Japanese Spitz</option>
+                        <option value="japanese-terrier">Japanese Terrier</option>
+                        <option value="jindo">Jindo</option>
+                        <option value="kai-ken">Kai Ken</option>
+                        <option value="karelian-bear-dog">Karelian Bear Dog</option>
+                        <option value="keeshond">Keeshond</option>
+                        <option value="kerry-blue-terrier">Kerry Blue Terrier</option>
+                        <option value="kishu-ken">Kishu Ken</option>
+                        <option value="komondor">Komondor</option>
+                        <option value="kromfohrlander">Kromfohrlander</option>
+                        <option value="kuvasz">Kuvasz</option>
+                        <option value="labrador-retriever">Labrador Retriever</option>
+                        <option value="lagotto-romagnolo">Lagotto Romagnolo</option>
+                        <option value="lakeland-terrier">Lakeland Terrier</option>
+                        <option value="lancashire-heeler">Lancashire Heeler</option>
+                        <option value="lapponian-herder">Lapponian Herder</option>
+                        <option value="leonberger">Leonberger</option>
+                        <option value="lhasa-apso">Lhasa Apso</option>
+                        <option value="lowchen">Lowchen</option>
+                        <option value="maltese">Maltese</option>
+                        <option value="manchester-terrier">Manchester Terrier</option>
+                        <option value="mastiff">Mastiff</option>
+                        <option value="miniature-american-shepherd">Miniature American Shepherd</option>
+                        <option value="miniature-bull-terrier">Miniature Bull Terrier</option>
+                        <option value="miniature-pinscher">Miniature Pinscher</option>
+                        <option value="poodle-miniature">Miniature Poodle</option>
+                        <option value="miniature-schnauzer">Miniature Schnauzer</option>
+                        <option value="mountain-cur">Mountain Cur</option>
+                        <option value="mudi">Mudi</option>
+                        <option value="neapolitan-mastiff">Neapolitan Mastiff</option>
+                        <option value="nederlandse-kooikerhondje">Nederlandse Kooikerhondje</option>
+                        <option value="newfoundland">Newfoundland</option>
+                        <option value="norfolk-terrier">Norfolk Terrier</option>
+                        <option value="norrbottenspets">Norrbottenspets</option>
+                        <option value="norwegian-buhund">Norwegian Buhund</option>
+                        <option value="norwegian-elkhound">Norwegian Elkhound</option>
+                        <option value="norwegian-lundehund">Norwegian Lundehund</option>
+                        <option value="norwich-terrier">Norwich Terrier</option>
+                        <option value="nova-scotia-duck-tolling-retriever">Nova Scotia Duck Tolling Retriever</option>
+                        <option value="old-english-sheepdog">Old English Sheepdog</option>
+                        <option value="otterhound">Otterhound</option>
+                        <option value="papillon">Papillon</option>
+                        <option value="parson-russell-terrier">Parson Russell Terrier</option>
+                        <option value="pekingese">Pekingese</option>
+                        <option value="pembroke-welsh-corgi">Pembroke Welsh Corgi</option>
+                        <option value="perro-de-presa-canario">Perro de Presa Canario</option>
+                        <option value="peruvian-inca-orchid">Peruvian Inca Orchid</option>
+                        <option value="petit-basset-griffon-vendeen">Petit Basset Griffon Vendeen</option>
+                        <option value="pharaoh-hound">Pharaoh Hound</option>
+                        <option value="plott-hound">Plott Hound</option>
+                        <option value="pointer">Pointer</option>
+                        <option value="polish-lowland-sheepdog">Polish Lowland Sheepdog</option>
+                        <option value="pomeranian">Pomeranian</option>
+                        <option value="porcelaine">Porcelaine</option>
+                        <option value="portuguese-podengo">Portuguese Podengo</option>
+                        <option value="portuguese-podengo-pequeno">Portuguese Podengo Pequeno</option>
+                        <option value="portuguese-pointer">Portuguese Pointer</option>
+                        <option value="portuguese-sheepdog">Portuguese Sheepdog</option>
+                        <option value="portuguese-water-dog">Portuguese Water Dog</option>
+                        <option value="pudelpointer">Pudelpointer</option>
+                        <option value="pug">Pug</option>
+                        <option value="puli">Puli</option>
+                        <option value="pumi">Pumi</option>
+                        <option value="pyrenean-mastiff">Pyrenean Mastiff</option>
+                        <option value="pyrenean-shepherd">Pyrenean Shepherd</option>
+                        <option value="rafeiro-do-alentejo">Rafeiro do Alentejo</option>
+                        <option value="rat-terrier">Rat Terrier</option>
+                        <option value="redbone-coonhound">Redbone Coonhound</option>
+                        <option value="rhodesian-ridgeback">Rhodesian Ridgeback</option>
+                        <option value="romanian-mioritic-shepherd-dog">Romanian Mioritic Shepherd Dog</option>
+                        <option value="rottweiler">Rottweiler</option>
+                        <option value="russell-terrier">Russell Terrier</option>
+                        <option value="russian-toy">Russian Toy</option>
+                        <option value="russian-tsvetnaya-bolonka">Russian Tsvetnaya Bolonka</option>
+                        <option value="saint-bernard">Saint Bernard</option>
+                        <option value="saluki">Saluki</option>
+                        <option value="samoyed">Samoyed</option>
+                        <option value="schapendoes">Schapendoes</option>
+                        <option value="schipperke">Schipperke</option>
+                        <option value="scottish-deerhound">Scottish Deerhound</option>
+                        <option value="scottish-terrier">Scottish Terrier</option>
+                        <option value="sealyham-terrier">Sealyham Terrier</option>
+                        <option value="segugio-italiano">Segugio Italiano</option>
+                        <option value="shetland-sheepdog">Shetland Sheepdog</option>
+                        <option value="shiba-inu">Shiba Inu</option>
+                        <option value="shih-tzu">Shih Tzu</option>
+                        <option value="shikoku">Shikoku</option>
+                        <option value="siberian-husky">Siberian Husky</option>
+                        <option value="silky-terrier">Silky Terrier</option>
+                        <option value="sloughi">Sloughi</option>
+                        <option value="slovakian-wirehaired-pointer">Slovakian Wirehaired Pointer</option>
+                        <option value="slovensky-cuvac">Slovensky Cuvac</option>
+                        <option value="slovensky-kopov">Slovensky Kopov</option>
+                        <option value="small-munsterlander">Small Munsterlander</option>
+                        <option value="spanish-mastiff">Spanish Mastiff</option>
+                        <option value="spanish-water-dog">Spanish Water Dog</option>
+                        <option value="spinone-italiano">Spinone Italiano</option>
+                        <option value="stabyhoun">Stabyhoun</option>
+                        <option value="poodle-standard">Standard Poodle</option>
+                        <option value="standard-schnauzer">Standard Schnauzer</option>
+                        <option value="sussex-spaniel">Sussex Spaniel</option>
+                        <option value="swedish-lapphund">Swedish Lapphund</option>
+                        <option value="swedish-vallhund">Swedish Vallhund</option>
+                        <option value="taiwan-dog">Taiwan Dog</option>
+                        <option value="teddy-roosevelt-terrier">Teddy Roosevelt Terrier</option>
+                        <option value="thai-ridgeback">Thai Ridgeback</option>
+                        <option value="tibetan-mastiff">Tibetan Mastiff</option>
+                        <option value="tibetan-spaniel">Tibetan Spaniel</option>
+                        <option value="tibetan-terrier">Tibetan Terrier</option>
+                        <option value="tornjak">Tornjak</option>
+                        <option value="tosa">Tosa</option>
+                        <option value="toy-fox-terrier">Toy Fox Terrier</option>
+                        <option value="poodle-toy">Toy Poodle</option>
+                        <option value="transylvanian-hound">Transylvanian Hound</option>
+                        <option value="treeing-tennessee-brindle">Treeing Tennessee Brindle</option>
+                        <option value="treeing-walker-coonhound">Treeing Walker Coonhound</option>
+                        <option value="vizsla">Vizsla</option>
+                        <option value="volpino-italiano">Volpino Italiano</option>
+                        <option value="weimaraner">Weimaraner</option>
+                        <option value="welsh-springer-spaniel">Welsh Springer Spaniel</option>
+                        <option value="wetterhoun">Wetterhoun</option>
+                        <option value="whippet">Whippet</option>
+                        <option value="wirehaired-pointing-griffon">Wirehaired Pointing Griffon</option>
+                        <option value="wirehaired-vizsla">Wirehaired Vizsla</option>
+                        <option value="working-kelpie">Working Kelpie</option>
+                        <option value="xoloitzcuintli">Xoloitzcuintli</option>
+                        <option value="yakutian-laika">Yakutian Laika</option>
+                        <option value="yorkshire-terrier">Yorkshire Terrier</option>
+                    </select>
+                </div>
+                <div class = "columnG">
+                    <h1>Submit Choices</h1>
+                    <button type="submit" style="width:350px;height:50px; font-size:20px;">Search Selected Dog Breeds</button>
+                </div>
+            </form>
+
+
+            <div class = "column1">
+                <button type="button" class="collapsible"><h2>Herding Group</h2></button>
+                <div class="content">
+                    <ul>
+                        <li>Australian Cattle Dog</li>
+                        <li>Australian Shepherd</li>
+                        <li>Bearded Collie</li>
+                        <li>Beauceron</li>
+                        <li>Belgian Laekenois</li>
+                        <li>Belgian Malinois</li>
+                        <li>Belgian Sheepdog</li>
+                        <li>Belgian Tervuren</li>
+                        <li>Bergamasco Sheepdog</li>
+                        <li>Berger Picard</li>
+                        <li>Border Collie</li>
+                        <li>Bouvier des Flandres</li>
+                        <li>Briard</li>
+                        <li>Canaan Dog</li>
+                        <li>Cardigan Welsh Corgi</li>
+                        <li>Collie</li>
+                        <li>Entlebucher Mountain Dog</li>
+                        <li>Finnish Lapphund</li>
+                        <li>German Shepherd Dog</li>
+                        <li>Icelandic Sheepdog</li>
+                        <li>Miniature American Shepherd</li>
+                        <li>Norwegian Buhund</li>
+                        <li>Old English Sheepdog</li>
+                        <li>Pembroke Welsh Corgi</li>
+                        <li>Polish Lowland Sheepdog</li>
+                        <li>Puli</li>
+                        <li>Pumi</li>
+                        <li>Pyrenean Shepherd</li>
+                        <li>Shetland Sheepdog</li>
+                        <li>Spanish Water Dog</li>
+                        <li>Swedish Vallhund</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class = "column2">
+                <button type="button" class="collapsible"><h2>Hound Group</h2></button>
+                <div class="content">
+                    <ul>
+                        <li>Afghan Hound</li>
+                        <li>American English Coonhound</li>
+                        <li>American Foxhound</li>
+                        <li>Azawakh</li>
+                        <li>Basenji</li>
+                        <li>Basset Hound</li>
+                        <li>Beagle</li>
+                        <li>Black and Tan Coonhound</li>
+                        <li>Bloodhound</li>
+                        <li>Bluetick Coonhound</li>
+                        <li>Borzoi</li>
+                        <li>Cirneco dell’Etna</li>
+                        <li>Dachshund</li>
+                        <li>English Foxhound</li>
+                        <li>Grand Basset Griffon Vendeen</li>
+                        <li>Greyhound</li>
+                        <li>Harrier</li>
+                        <li>Ibizan Hound</li>
+                        <li>Irish Wolfhound</li>
+                        <li>Norwegian Elkhound</li>
+                        <li>Otterhound</li>
+                        <li>Petit Basset Griffon Vendeen</li>
+                        <li>Pharaoh Hound</li>
+                        <li>Plott Hound</li>
+                        <li>Portuguese Podengo Pequeno</li>
+                        <li>Redbone Coonhound</li>
+                        <li>Rhodesian Ridgeback</li>
+                        <li>Saluki</li>
+                        <li>Scottish Deerhound</li>
+                        <li>Sloughi</li>
+                        <li>Treeing Walker Coonhound</li>
+                        <li>Whippet</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class = "column3">
+                <button type="button" class="collapsible"><h2>Non-Sporting Group</h2></button>
+                <div class="content">
+                    <ul>
+                        <li>American Eskimo Dog</li>
+                        <li>Bichon Frise</li>
+                        <li>Boston Terrier</li>
+                        <li>Bulldog</li>
+                        <li>Chinese Shar-Pei</li>
+                        <li>Chow Chow</li>
+                        <li>Coton de Tulear</li>
+                        <li>Dalmatian</li>
+                        <li>Finnish Spitz</li>
+                        <li>French Bulldog</li>
+                        <li>Keeshond</li>
+                        <li>Lhasa Apso</li>
+                        <li>Lowchen</li>
+                        <li>Miniature Poodle</li>
+                        <li>Norwegian Lundehund</li>
+                        <li>Schipperke</li>
+                        <li>Shiba Inu</li>
+                        <li>Standard Poodle</li>
+                        <li>Tibetan Spaniel</li>
+                        <li>Tibetan Terrier</li>
+                        <li>Xoloitzcuintli</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "column4">
+                <button type="button" class="collapsible"><h2>Sporting Group</h2></button>
+                <div class="content">
+                    <ul>
+                        <li>American Water Spaniel</li>
+                        <li>Barbet</li>
+                        <li>Boykin Spaniel</li>
+                        <li>Brittany</li>
+                        <li>Chesapeake Bay Retriever</li>
+                        <li>Clumber Spaniel</li>
+                        <li>Cocker Spaniel</li>
+                        <li>Curly-Coated Retriever</li>
+                        <li>English Cocker Spaniel</li>
+                        <li>English Setter</li>
+                        <li>English Springer Spaniel</li>
+                        <li>Field Spaniel</li>
+                        <li>Flat-Coated Retriever</li>
+                        <li>German Shorthaired Pointer</li>
+                        <li>German Wirehaired Pointer</li>
+                        <li>Golden Retriever</li>
+                        <li>Gordon Setter</li>
+                        <li>Irish Red and White Setter</li>
+                        <li>Irish Setter</li>
+                        <li>Irish Water Spaniel</li>
+                        <li>Labrador Retriever</li>
+                        <li>Lagotto Romagnolo</li>
+                        <li>Nederlandse Kooikerhondje</li>
+                        <li>Nova Scotia Duck Tolling Retriever</li>
+                        <li>Pointer</li>
+                        <li>Spinone Italiano</li>
+                        <li>Sussex Spaniel</li>
+                        <li>Vizsla</li>
+                        <li>Weimaraner</li>
+                        <li>Welsh Springer Spaniel</li>
+                        <li>Wirehaired Pointing Griffon</li>
+                        <li>Wirehaired Vizsla</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "column5">
+                <button type="button" class="collapsible"><h2>Terrier Group</h2></button>
+                <div class="content">
+                    <ul>
+                        <li>Airedale Terrier</li>
+                        <li>American Hairless Terrier</li>
+                        <li>American Staffordshire Terrier</li>
+                        <li>Australian Terrier</li>
+                        <li>Bedlington Terrier</li>
+                        <li>Border Terrier</li>
+                        <li>Bull Terrier</li>
+                        <li>Cairn Terrier</li>
+                        <li>Cesky Terrier</li>
+                        <li>Dandie Dinmont Terrier</li>
+                        <li>Glen of Imaal Terrier</li>
+                        <li>Irish Terrier</li>
+                        <li>Kerry Blue Terrier</li>
+                        <li>Lakeland Terrier</li>
+                        <li>Manchester Terrier</li>
+                        <li>Miniature Bull Terrier</li>
+                        <li>Miniature Schnauzer</li>
+                        <li>Norfolk Terrier</li>
+                        <li>Norwich Terrier</li>
+                        <li>Parson Russell Terrier</li>
+                        <li>Rat Terrier</li>
+                        <li>Russell Terrier</li>
+                        <li>Scottish Terrier</li>
+                        <li>Sealyham Terrier</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "column6">
+                <button type="button" class="collapsible"><h2>Toy Group</h2></button>
+                <div class="content">
+                    <ul>
+                        <li>Affenpinscher</li>
+                        <li>Biewer Terrier</li>
+                        <li>Brussels Griffon</li>
+                        <li>Cavalier King Charles Spaniel</li>
+                        <li>Chihuahua</li>
+                        <li>Chinese Crested</li>
+                        <li>English Toy Spaniel</li>
+                        <li>Havanese</li>
+                        <li>Italian Greyhound</li>
+                        <li>Japanese Chin</li>
+                        <li>Maltese</li>
+                        <li>Miniature Pinscher</li>
+                        <li>Papillon</li>
+                        <li>Pekingese</li>
+                        <li>Pomeranian</li>
+                        <li>Pug</li>
+                        <li>Shih Tzu</li>
+                        <li>Silky Terrier</li>
+                        <li>Toy Fox Terrier</li>
+                        <li>Toy Poodle</li>
+                        <li>Yorkshire Terrier</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "column7">
+                <button type="button" class="collapsible"><h2>Working Group</h2></button>
+                <div class="content">
+                    <ul>
+                        <li>Akita</li>
+                        <li>Alaskan Malamute</li>
+                        <li>Anatolian Shepherd Dog</li>
+                        <li>Bernese Mountain Dog</li>
+                        <li>Black Russian Terrier</li>
+                        <li>Boerboel</li>
+                        <li>Boxer</li>
+                        <li>Bullmastiff</li>
+                        <li>Cane Corso</li>
+                        <li>Chinook</li>
+                        <li>Doberman Pinscher</li>
+                        <li>Dogo Argentino</li>
+                        <li>Dogue de Bordeaux</li>
+                        <li>German Pinscher</li>
+                        <li>Giant Schnauzer</li>
+                        <li>Great Dane</li>
+                        <li>Great Pyrenees</li>
+                        <li>Greater Swiss Mountain Dog</li>
+                        <li>Komondor</li>
+                        <li>Kuvasz</li>
+                        <li>Leonberger</li>
+                        <li>Mastiff</li>
+                        <li>Neapolitan Mastiff</li>
+                        <li>Newfoundland</li>
+                        <li>Portuguese Water Dog</li>
+                        <li>Rottweiler</li>
+                        <li>Saint Bernard</li>
+                        <li>Samoyed</li>
+                        <li>Siberian Husky</li>
+                        <li>Standard Schnauzer</li>
+                        <li>Tibetan Mastiff</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "column8">
+                <button type="button" class="collapsible"><h2>Miscellaneous Group</h2></button>
+                <div class="content">
+                    <ul>
+                        <li>Bracco Italiano</li>
+                        <li>Danish-Swedish Farmdog</li>
+                        <li>Dutch Shepherd</li>
+                        <li>Lancashire Heeler</li>
+                        <li>Mudi</li>
+                        <li>Norrbottenspets</li>
+                        <li>Peruvian Inca Orchid</li>
+                        <li>Portuguese Podengo</li>
+                        <li>Russian Toy</li>
+                        <li>Small Munsterlander</li>
+                        <li>Teddy Roosevelt Terrier</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "column9">
+                <button type="button" class="collapsible"><h2>Foundation Stock Group</h2></button>
+                <div class="content">
+                    <div style="width: 100%;">
+                        <div style="width: 49%; float: left;">
+                            <ul>
+                                <li>Alaskan Klee Kai</li>
+                                <li>American Bulldog</li>
+                                <li>American Leopard Hound</li>
+                                <li>Appenzeller Sennenhund</li>
+                                <li>Australian Kelpie</li>
+                                <li>Australian Stumpy Tail Cattle Dog</li>
+                                <li>Barbado da Terceira</li>
+                                <li>Basset Fauve de Bretagne</li>
+                                <li>Bavarian Mountain Scent Hound</li>
+                                <li>Bohemian Shepherd</li>
+                                <li>Bolognese</li>
+                                <li>Braque du Bourbonnais</li>
+                                <li>Braque Francais Pyrenean</li>
+                                <li>Broholmer</li>
+                                <li>Carolina Dog</li>
+                                <li>Catahoula Leopard Dog</li>
+                                <li>Caucasian Shepherd Dog</li>
+                                <li>Central Asian Shepherd Dog</li>
+                                <li>Czechoslovakian Vlcak</li>
+                                <li>Deutscher Wachtelhund</li>
+                                <li>Drentsche Patrijshond</li>
+                                <li>Drever</li>
+                                <li>Estrela Mountain Dog</li>
+                                <li>Eurasier</li>
+                                <li>French Spaniel</li>
+                                <li>German Longhaired Pointer</li>
+                                <li>German Spitz</li>
+                                <li>Hamiltonstovare</li>
+                                <li>Hanoverian Scenthound</li>
+                                <li>Hokkaido</li>
+                                <li>Hovawart</li>
+                                <li>Jagdterrier</li>
+                                <li>Japanese Akitainu</li>
+                                <li>Japanese Spitz</li>
+                                <li>Japanese Terrier</li>
+                                <li>Jindo</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-left: 50%;">
+                            <uL>
+                                <li>Kai Ken</li>
+                                <li>Karelian Bear Dog</li>
+                                <li>Kishu Ken</li>
+                                <li>Kromfohrlander</li>
+                                <li>Lapponian Herder</li>
+                                <li>Mountain Cur</li>
+                                <li>Perro de Presa Canario</li>
+                                <li>Porcelaine</li>
+                                <li>Portuguese Pointer</li>
+                                <li>Portuguese Sheepdog</li>
+                                <li>Pudelpointer</li>
+                                <li>Pyrenean Mastiff</li>
+                                <li>Rafeiro do Alentejo</li>
+                                <li>Romanian Mioritic Shepherd Dog</li>
+                                <li>Russian Tsvetnaya Bolonka</li>
+                                <li>Schapendoes</li>
+                                <li>Segugio Italiano</li>
+                                <li>Shikoku</li>
+                                <li>Slovakian Wirehaired Pointer</li>
+                                <li>Slovensky Cuvac</li>
+                                <li>Slovensky Kopov</li>
+                                <li>Spanish Mastiff</li>
+                                <li>Stabyhoun</li>
+                                <li>Swedish Lapphund</li>
+                                <li>Taiwan Dog</li>
+                                <li>Thai Ridgeback</li>
+                                <li>Tornjak</li>
+                                <li>Tosa</li>
+                                <li>Transylvanian Hound</li>
+                                <li>Treeing Tennessee Brindle</li>
+                                <li>Volpino Italiano</li>
+                                <li>Wetterhoun</li>
+                                <li>Working Kelpie</li>
+                                <li>Yakutian Laika</li>
+                            </uL>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+    </body>
+</html>

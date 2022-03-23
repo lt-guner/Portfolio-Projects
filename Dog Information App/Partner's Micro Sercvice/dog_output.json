@@ -1,0 +1,1640 @@
+[
+  {
+    "breed": "Affenpinscher",
+    "group": "Toy Group",
+    "request_name": "affenpinscher",
+    "picture_url": "https://en.wikipedia.org/wiki/Affenpinscher#/media/File:Affenpinscher.jpg"
+  },
+  {
+    "breed": "Afghan Hound",
+    "group": "Hound Group",
+    "request_name": "afghan-hound",
+    "picture_url": "https://en.wikipedia.org/wiki/Afghan_Hound#/media/File:Afghane.jpg"
+  },
+  {
+    "breed": "Airedale Terrier",
+    "group": "Terrier Group",
+    "request_name": "airedale-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Airedale_Terrier#/media/File:Airedale_Terrier.jpg"
+  },
+  {
+    "breed": "Akita",
+    "group": "Working Group",
+    "request_name": "akita",
+    "picture_url": "https://en.wikipedia.org/wiki/Akita_(dog)#/media/File:Akita_Inu_dog.jpg"
+  },
+  {
+    "breed": "Alaskan Klee Kai",
+    "group": "Foundation Stock Service",
+    "request_name": "alaskan-klee-kai",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/WOWAKK-Kukai-Alaskan-Klee-Kai.jpg/220px-WOWAKK-Kukai-Alaskan-Klee-Kai.jpg"
+  },
+  {
+    "breed": "Alaskan Malamute",
+    "group": "Working Group",
+    "request_name": "alaskan-malamute",
+    "picture_url": "https://en.wikipedia.org/wiki/Alaskan_Malamute#/media/File:Alaskan_Malamute.jpg"
+  },
+  {
+    "breed": "American Bulldog",
+    "group": "Foundation Stock Service",
+    "request_name": "american-bulldog",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Faithfullbull_Spike_of_Mightybull.jpg/220px-Faithfullbull_Spike_of_Mightybull.jpg"
+  },
+  {
+    "breed": "American English Coonhound",
+    "group": "Hound Group",
+    "request_name": "american-english-coonhound",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/English_Coonhound.jpg/220px-English_Coonhound.jpg"
+  },
+  {
+    "breed": "American Eskimo Dog",
+    "group": "Non-Sporting Group",
+    "request_name": "american-eskimo-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/American_Eskimo_Dog#/media/File:American_Eskimo_Dog_1.jpg"
+  },
+  {
+    "breed": "American Foxhound",
+    "group": "Hound Group",
+    "request_name": "american-foxhound",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/AmericanFoxhound2.jpg/220px-AmericanFoxhound2.jpg"
+  },
+  {
+    "breed": "American Hairless Terrier",
+    "group": "Terrier Group",
+    "request_name": "american-hairless-terrier",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Aht-sable%26white3.jpg/220px-Aht-sable%26white3.jpg"
+  },
+  {
+    "breed": "American Leopard Hound",
+    "group": "Foundation Stock Service",
+    "request_name": "american-leopard-hound",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/American_Leopard_Hound.jpg/220px-American_Leopard_Hound.jpg"
+  },
+  {
+    "breed": "American Staffordshire Terrier",
+    "group": "Terrier Group",
+    "request_name": "american-staffordshire-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/American_Staffordshire_Terrier#/media/File:AMERICAN_STAFFORDSHIRE_TERRIER,_Zican%E2%80%99s_Bz_Ez_Dragon_(24208348891).2.jpg"
+  },
+  {
+    "breed": "American Water Spaniel",
+    "group": "Sporting Group",
+    "request_name": "american-water-spaniel",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Chien_d%27eau_americain_champion_1.JPG/220px-Chien_d%27eau_americain_champion_1.JPG"
+  },
+  {
+    "breed": "Anatolian Shepherd Dog",
+    "group": "Working Group",
+    "request_name": "anatolian-shepherd-dog",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Kangal_front_on.jpg/220px-Kangal_front_on.jpg"
+  },
+  {
+    "breed": "Appenzeller Sennenhund",
+    "group": "Foundation Stock Service",
+    "request_name": "appenzeller-sennenhund",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Dara_essy.jpg/220px-Dara_essy.jpg"
+  },
+  {
+    "breed": "Australian Cattle Dog",
+    "group": "Herding Group",
+    "request_name": "australian-cattle-dog",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/ACD-blue-spud.jpg/220px-ACD-blue-spud.jpg"
+  },
+  {
+    "breed": "Australian Kelpie",
+    "group": "Foundation Stock Service",
+    "request_name": "australian-kelpie",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Hilu_the_Australian_Kelpie_dog.jpg/220px-Hilu_the_Australian_Kelpie_dog.jpg"
+  },
+  {
+    "breed": "Australian Shepherd",
+    "group": "Herding Group",
+    "request_name": "australian-shepherd",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Australian_Shepherd_red_bi.JPG/220px-Australian_Shepherd_red_bi.JPG"
+  },
+  {
+    "breed": "Australian Stumpy Tail Cattle Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "australian-stumpy-tail-cattle-dog",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Australian_Stumpy_Tail_Cattle_Dog.jpg/220px-Australian_Stumpy_Tail_Cattle_Dog.jpg"
+  },
+  {
+    "breed": "Australian Terrier",
+    "group": "Terrier Group",
+    "request_name": "australian-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Australian_Terrier#/media/File:Australian_Terrier_adult_male.jpg"
+  },
+  {
+    "breed": "Azawakh",
+    "group": "Hound Group",
+    "request_name": "azawakh",
+    "picture_url": "https://en.wikipedia.org/wiki/Azawakh#/media/File:Bistrita_2015_(22).jpg"
+  },
+  {
+    "breed": "Barbado da Terceira",
+    "group": "Foundation Stock Service",
+    "request_name": "barbado-da-terceira",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Barbado_da_Terceira_%28young_female%29.jpg/220px-Barbado_da_Terceira_%28young_female%29.jpg"
+  },
+  {
+    "breed": "Barbet",
+    "group": "Sporting Group",
+    "request_name": "barbet",
+    "picture_url": "https://en.wikipedia.org/wiki/Barbet_(dog)#/media/File:Chien_de_race_Barbet.jpg"
+  },
+  {
+    "breed": "Basenji",
+    "group": "Hound Group",
+    "request_name": "basenji",
+    "picture_url": "https://en.wikipedia.org/wiki/Basenji#/media/File:Basenji_Profile_(loosercrop).jpg"
+  },
+  {
+    "breed": "Basset Fauve de Bretagne",
+    "group": "Foundation Stock Service",
+    "request_name": "basset-fauve-de-bretagne",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Basset_Fauve_de_Bretagne_600.jpg/220px-Basset_Fauve_de_Bretagne_600.jpg"
+  },
+  {
+    "breed": "Basset Hound",
+    "group": "Hound Group",
+    "request_name": "basset-hound",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/BassetHound_profil.jpg/220px-BassetHound_profil.jpg"
+  },
+  {
+    "breed": "Bavarian Mountain Scent Hound",
+    "group": "Foundation Stock Service",
+    "request_name": "bavarian-mountain-scent-hound",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Zoran_Spod_Ruskiej_Granicy_the_Bavarian_Mountain_Hound.jpg/220px-Zoran_Spod_Ruskiej_Granicy_the_Bavarian_Mountain_Hound.jpg"
+  },
+  {
+    "breed": "Beagle",
+    "group": "Hound Group",
+    "request_name": "beagle",
+    "picture_url": "https://en.wikipedia.org/wiki/Beagle#/media/File:Beagle_600.jpg"
+  },
+  {
+    "breed": "Bearded Collie",
+    "group": "Herding Group",
+    "request_name": "bearded-collie",
+    "picture_url": "https://en.wikipedia.org/wiki/Bearded_Collie#/media/File:Bearded_Collie_600.jpg"
+  },
+  {
+    "breed": "Beauceron",
+    "group": "Herding Group",
+    "request_name": "beauceron",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Owczarek_francuski_beauceron_009pl.jpg/220px-Owczarek_francuski_beauceron_009pl.jpg"
+  },
+  {
+    "breed": "Bedlington Terrier",
+    "group": "Terrier Group",
+    "request_name": "bedlington-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Bedlington_Terrier#/media/File:Boutchie_apres_championnat_004.JPG"
+  },
+  {
+    "breed": "Belgian Laekenois",
+    "group": "Herding Group",
+    "request_name": "belgian-laekenois",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/04_-_Belgian_shepherd_dog_varieties_-_Groenendael%2CTervuren%2C_Malinois%2C_Laekenois.jpg/220px-04_-_Belgian_shepherd_dog_varieties_-_Groenendael%2CTervuren%2C_Malinois%2C_Laekenois.jpg"
+  },
+  {
+    "breed": "Belgian Malinois",
+    "group": "Herding Group",
+    "request_name": "belgian-malinois",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/04_-_Belgian_shepherd_dog_varieties_-_Groenendael%2CTervuren%2C_Malinois%2C_Laekenois.jpg/220px-04_-_Belgian_shepherd_dog_varieties_-_Groenendael%2CTervuren%2C_Malinois%2C_Laekenois.jpg"
+  },
+  {
+    "breed": "Belgian Sheepdog",
+    "group": "Herding Group",
+    "request_name": "belgian-sheepdog",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/04_-_Belgian_shepherd_dog_varieties_-_Groenendael%2CTervuren%2C_Malinois%2C_Laekenois.jpg/220px-04_-_Belgian_shepherd_dog_varieties_-_Groenendael%2CTervuren%2C_Malinois%2C_Laekenois.jpg"
+  },
+  {
+    "breed": "Belgian Tervuren",
+    "group": "Herding Group",
+    "request_name": "belgian-tervuren",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/04_-_Belgian_shepherd_dog_varieties_-_Groenendael%2CTervuren%2C_Malinois%2C_Laekenois.jpg/220px-04_-_Belgian_shepherd_dog_varieties_-_Groenendael%2CTervuren%2C_Malinois%2C_Laekenois.jpg"
+  },
+  {
+    "breed": "Bergamasco Sheepdog",
+    "group": "Herding Group",
+    "request_name": "bergamasco-sheepdog",
+    "picture_url": "https://en.wikipedia.org/wiki/Bergamasco_Shepherd#/media/File:Ortensia_di_Valle_Scrivia.jpg"
+  },
+  {
+    "breed": "Berger Picard",
+    "group": "Herding Group",
+    "request_name": "berger-picard",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Picard_Delice_Stacked.jpg/220px-Picard_Delice_Stacked.jpg"
+  },
+  {
+    "breed": "Bernese Mountain",
+    "group": "Working Group",
+    "request_name": "bernese-mountain-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Bernese_Mountain_Dog#/media/File:Othello.jpg"
+  },
+  {
+    "breed": "Bichon Frise",
+    "group": "Non-Sporting Group",
+    "request_name": "bichon-frise",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bichon_Fris%C3%A9_-_studdogbichon.jpg/220px-Bichon_Fris%C3%A9_-_studdogbichon.jpg"
+  },
+  {
+    "breed": "Biewer Terrier",
+    "group": "Toy Group",
+    "request_name": "biewer-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Yorkshire_Terrier#/media/File:(2_version)_Grupp_3,_YORKSHIRETERRIER,_NO_UCH_SE_UCH_Oxzar_Amazing_Bel%E2%80%99s_Toffy_(24310212305).jpg"
+  },
+  {
+    "breed": "Black and Tan Coonhound",
+    "group": "Hound Group",
+    "request_name": "black-and-tan-coonhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Black_and_Tan_Coonhound#/media/File:Black_and_Tan_Coonhound.jpg"
+  },
+  {
+    "breed": "Black Russian Terrier",
+    "group": "Working Group",
+    "request_name": "black-russian-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Black_Russian_Terrier#/media/File:Russianblack.jpg"
+  },
+  {
+    "breed": "Bloodhound",
+    "group": "Hound Group",
+    "request_name": "bloodhound",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Bloodhound_Erland22.jpg/220px-Bloodhound_Erland22.jpg"
+  },
+  {
+    "breed": "Bluetick Coonhound",
+    "group": "Hound Group",
+    "request_name": "bluetick-coonhound",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BluetickCoonhound.jpg/220px-BluetickCoonhound.jpg"
+  },
+  {
+    "breed": "Boerboel",
+    "group": "Working Group",
+    "request_name": "boerboel",
+    "picture_url": "https://en.wikipedia.org/wiki/Boerboel#/media/File:Boerboel_fawn_border.jpg"
+  },
+  {
+    "breed": "Bohemian Shepherd",
+    "group": "Foundation Stock Service",
+    "request_name": "bohemian-shepherd",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/OREADY_KROSANDRA_%2814%29.JPG/220px-OREADY_KROSANDRA_%2814%29.JPG"
+  },
+  {
+    "breed": "Bolognese",
+    "group": "Foundation Stock Service",
+    "request_name": "bolognese",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/DocFile_Bolognese.jpg/220px-DocFile_Bolognese.jpg"
+  },
+  {
+    "breed": "Border Collie",
+    "group": "Herding Group",
+    "request_name": "border-collie",
+    "picture_url": "https://en.wikipedia.org/wiki/Border_Collie#/media/File:BORDER_COLLIE,_Simaro_Million_Dollar_Baby_(24290879465)_2.jpg"
+  },
+  {
+    "breed": "Border Terrier",
+    "group": "Terrier Group",
+    "request_name": "border-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Border_Terrier#/media/File:Border_Terrier.jpg"
+  },
+  {
+    "breed": "Borzoi",
+    "group": "Hound Group",
+    "request_name": "borzoi",
+    "picture_url": "https://en.wikipedia.org/wiki/Borzoi#/media/File:Chart_rosyjski_borzoj_rybnik-kamien_pl.jpg"
+  },
+  {
+    "breed": "Boston Terrier",
+    "group": "Non-Sporting Group",
+    "request_name": "boston-terrier",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Boston-terrier-carlos-de.JPG/220px-Boston-terrier-carlos-de.JPG"
+  },
+  {
+    "breed": "Bouvier des Flandres",
+    "group": "Herding Group",
+    "request_name": "bouvier-des-flandres",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Bouvier.JPG/220px-Bouvier.JPG"
+  },
+  {
+    "breed": "Boxer",
+    "group": "Working Group",
+    "request_name": "boxer",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Male_fawn_Boxer_undocked.jpg/220px-Male_fawn_Boxer_undocked.jpg"
+  },
+  {
+    "breed": "Boykin",
+    "group": "Sporting Group",
+    "request_name": "boykin-spaniel",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Boykin_Spaniel_April_Jet.jpg/220px-Boykin_Spaniel_April_Jet.jpg"
+  },
+  {
+    "breed": "Bracco Italiano",
+    "group": "Miscellaneous Class",
+    "request_name": "bracco-italiano",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Giotto_BI.jpg/220px-Giotto_BI.jpg"
+  },
+  {
+    "breed": "Braque du Bourbonnais",
+    "group": "Foundation Stock Service",
+    "request_name": "braque-du-bourbonnais",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Braque_du_Bourbonnais.jpg/220px-Braque_du_Bourbonnais.jpg"
+  },
+  {
+    "breed": "Braque Francais Pyrenean",
+    "group": "Foundation Stock Service",
+    "request_name": "braque-francais-pyrenean",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wy%C5%BCe%C5%82_Gasko%C5%84ski.jpg/220px-Wy%C5%BCe%C5%82_Gasko%C5%84ski.jpg"
+  },
+  {
+    "breed": "Briard",
+    "group": "Herding Group",
+    "request_name": "briard",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Briard_fauve.JPG"
+  },
+  {
+    "breed": "Brittany",
+    "group": "Sporting Group",
+    "request_name": "brittany",
+    "picture_url": "https://en.wikipedia.org/wiki/Brittany_(dog)#/media/File:American_Brittany_standing.jpg"
+  },
+  {
+    "breed": "Broholmer",
+    "group": "Foundation Stock Service",
+    "request_name": "broholmer",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Male_Broholmer.jpg/220px-Male_Broholmer.jpg"
+  },
+  {
+    "breed": "Brussels Griffon",
+    "group": "Toy Group",
+    "request_name": "brussels-griffon",
+    "picture_url": "https://en.wikipedia.org/wiki/Griffon_Bruxellois#/media/File:Monkey_Bizniz_Drama_Queen.jpg"
+  },
+  {
+    "breed": "Bull Terrier",
+    "group": "Terrier Group",
+    "request_name": "bull-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Bull_Terrier#/media/File:Bullterrier-3453301920.jpg"
+  },
+  {
+    "breed": "Bulldog",
+    "group": "Non-Sporting Group",
+    "request_name": "bulldog",
+    "picture_url": "https://en.wikipedia.org/wiki/Bulldog#/media/File:Bulldog_adult_male.jpg"
+  },
+  {
+    "breed": "Bullmastiff",
+    "group": "Working Group",
+    "request_name": "bullmastiff",
+    "picture_url": "https://en.wikipedia.org/wiki/Bullmastiff#/media/File:Bullmastiff_edited.JPG"
+  },
+  {
+    "breed": "Cairn Terrier",
+    "group": "Terrier Group",
+    "request_name": "cairn-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Cairn_Terrier#/media/File:Cairn-Terrier-Garten1.jpg"
+  },
+  {
+    "breed": "Canaan Dog",
+    "group": "Herding Group",
+    "request_name": "canaan-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Canaan_Dog#/media/File:CanaanDogChakede.jpg"
+  },
+  {
+    "breed": "Cane Corso",
+    "group": "Working Group",
+    "request_name": "cane-corso",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/CaneCorso_%2823%29.jpg/220px-CaneCorso_%2823%29.jpg"
+  },
+  {
+    "breed": "Cardigan Welsh Corgi",
+    "group": "Herding Group",
+    "request_name": "cardigan-welsh-corgi",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Cardigan_Welsh_Corgi%2C_Profile.png/220px-Cardigan_Welsh_Corgi%2C_Profile.png"
+  },
+  {
+    "breed": "Carolina Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "carolina-dog",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Dakota%2C_the_Dixie_Dingo_%28or_Carolina_Dog%29.jpg/220px-Dakota%2C_the_Dixie_Dingo_%28or_Carolina_Dog%29.jpg"
+  },
+  {
+    "breed": "Catahoula Leopard Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "catahoula-leopard-dog",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/02._Coahoma_Arkansas_Logan.jpg/220px-02._Coahoma_Arkansas_Logan.jpg"
+  },
+  {
+    "breed": "Caucasian Shepherd Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "caucasian-shepherd-dog",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Owczarek_kaukaski_65556.jpg/220px-Owczarek_kaukaski_65556.jpg"
+  },
+  {
+    "breed": "Cavalier King Charles Spaniel",
+    "group": "Toy Group",
+    "request_name": "cavalier-king-charles-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/Cavalier_King_Charles_Spaniel#/media/File:CarterBIS.Tiki.13.6.09.jpg"
+  },
+  {
+    "breed": "Central Asian Shepherd Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "central-asian-shepherd-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Central_Asian_Shepherd_Dog#/media/File:2.CAO_in_Hungary.jpg"
+  },
+  {
+    "breed": "Cesky Terrier",
+    "group": "Terrier Group",
+    "request_name": "cesky-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Cesky_Terrier#/media/File:Terier_czeski_suka_2009_pl2.jpg"
+  },
+  {
+    "breed": "Chesapeake Bay Retriever",
+    "group": "Sporting Group",
+    "request_name": "chesapeake-bay-retriever",
+    "picture_url": "https://en.wikipedia.org/wiki/Chesapeake_Bay_Retriever#/media/File:CH_Chesapeake.jpg"
+  },
+  {
+    "breed": "Chihuahua",
+    "group": "Toy Group",
+    "request_name": "chihuahua",
+    "picture_url": "https://en.wikipedia.org/wiki/Chihuahua_(dog)#/media/File:Chihuahua1_bvdb.jpg"
+  },
+  {
+    "breed": "Chinese Crested",
+    "group": "Toy Group",
+    "request_name": "chinese-crested",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/220px-IndyStands.jpg"
+  },
+  {
+    "breed": "Chinese Shar-Pei",
+    "group": "Non-Sporting Group",
+    "request_name": "chinese-shar-pei",
+    "picture_url": "https://en.wikipedia.org/wiki/Shar_Pei#/media/File:Adult_sharpei.jpg"
+  },
+  {
+    "breed": "Chinook",
+    "group": "Working Group",
+    "request_name": "chinook",
+    "picture_url": "https://en.wikipedia.org/wiki/Chinook_(dog)#/media/File:Mountan_Laurel_Ajax_the_Chinook_dog.jpg"
+  },
+  {
+    "breed": "Chow Chow",
+    "group": "Non-Sporting Group",
+    "request_name": "chow-chow",
+    "picture_url": "https://en.wikipedia.org/wiki/Chow_Chow#/media/File:ChowChow2Szczecin.jpg"
+  },
+  {
+    "breed": "Cirneco dell\u2019Etna",
+    "group": "Hound Group",
+    "request_name": "cirneco-delletna",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Cirneco_dell_Etna_611.jpg/220px-Cirneco_dell_Etna_611.jpg"
+  },
+  {
+    "breed": "Clumber Spaniel",
+    "group": "Sporting Group",
+    "request_name": "clumber-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/Clumber_Spaniel#/media/File:Clumber_spaniel_rybnik_kamien_pppl.jpg"
+  },
+  {
+    "breed": "Cocker Spaniel",
+    "group": "Sporting Group",
+    "request_name": "cocker-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/Cocker_Spaniel#/media/File:Gessa_d'Aran_Copo_de_Nieve-_arancio_roano-_prop.Kalesa.jpg"
+  },
+  {
+    "breed": "Collie",
+    "group": "Herding Group",
+    "request_name": "collie",
+    "picture_url": "https://en.wikipedia.org/wiki/Collie#/media/File:1Dog-rough-collie-portrait.jpg"
+  },
+  {
+    "breed": "Coton de Tulear",
+    "group": "Non-Sporting Group",
+    "request_name": "coton-de-tulear",
+    "picture_url": "https://en.wikipedia.org/wiki/Coton_de_Tulear#/media/File:Coton_de_Tular_1.jpg"
+  },
+  {
+    "breed": "Curly-Coated Retriever",
+    "group": "Sporting Group",
+    "request_name": "curly-coated-retriever",
+    "picture_url": "https://en.wikipedia.org/wiki/Curly-coated_Retriever#/media/File:Curly_Coated_Retriever.jpg"
+  },
+  {
+    "breed": "Czechoslovakian Vlcak",
+    "group": "Foundation Stock Service",
+    "request_name": "czechoslovakian-vlcak",
+    "picture_url": "https://en.wikipedia.org/wiki/Czechoslovakian_Wolfdog#/media/File:TWH-jolly.JPG"
+  },
+  {
+    "breed": "Dachshund",
+    "group": "Hound Group",
+    "request_name": "dachshund",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Short-haired-Dachshund.jpg/220px-Short-haired-Dachshund.jpg"
+  },
+  {
+    "breed": "Dalmatian",
+    "group": "Non-Sporting Group",
+    "request_name": "dalmatian",
+    "picture_url": "https://en.wikipedia.org/wiki/Dalmatian_(dog)#/media/File:Dalmatiner_2.jpg"
+  },
+  {
+    "breed": "Dandie Dinmont Terrier",
+    "group": "Terrier Group",
+    "request_name": "dandie-dinmont-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Dandie_Dinmont_Terrier#/media/File:Dandie_Dinmont_Terrier_600.jpg"
+  },
+  {
+    "breed": "Danish-Swedish Farmdog",
+    "group": "Miscellaneous Class",
+    "request_name": "danish-swedish-farmdog",
+    "picture_url": "https://en.wikipedia.org/wiki/Danish%E2%80%93Swedish_Farmdog#/media/File:Danish_Farm_Dog1604fxcr_wb.jpg"
+  },
+  {
+    "breed": "Deutscher Wachtelhund",
+    "group": "Foundation Stock Service",
+    "request_name": "deutscher-wachtelhund",
+    "picture_url": "https://en.wikipedia.org/wiki/German_Spaniel#/media/File:Plochacz_niemiecki_2_pl.jpg"
+  },
+  {
+    "breed": "Doberman Pinscher",
+    "group": "Working Group",
+    "request_name": "doberman-pinscher",
+    "picture_url": "https://en.wikipedia.org/wiki/Dobermann#/media/File:Dobermann_handling.jpg"
+  },
+  {
+    "breed": "Dogo Argentino",
+    "group": "Working Group",
+    "request_name": "dogo-argentino",
+    "picture_url": "https://en.wikipedia.org/wiki/Dogo_Argentino#/media/File:0Dogo-argentino-22122251920.jpg"
+  },
+  {
+    "breed": "Dogue de Bordeaux",
+    "group": "Working Group",
+    "request_name": "dogue-de-bordeaux",
+    "picture_url": "https://en.wikipedia.org/wiki/Dogue_de_Bordeaux#/media/File:French_Mastiff_female_4.jpg"
+  },
+  {
+    "breed": "Drentsche Patrijshond",
+    "group": "Foundation Stock Service",
+    "request_name": "drentsche-patrijshond",
+    "picture_url": "https://en.wikipedia.org/wiki/Drentse_Patrijshond#/media/File:Drentse_Patrijshond.jpg"
+  },
+  {
+    "breed": "Drever",
+    "group": "Foundation Stock Service",
+    "request_name": "drever",
+    "picture_url": "https://en.wikipedia.org/wiki/Drever#/media/File:Drever_NUCh_Tanjo.jpg"
+  },
+  {
+    "breed": "Dutch Shepherd",
+    "group": "Miscellaneous Class",
+    "request_name": "dutch-shepherd",
+    "picture_url": "https://en.wikipedia.org/wiki/Dutch_Shepherd#/media/File:Short-haired_Dutch_Shepherd%C2%A9CaroleField.jpg"
+  },
+  {
+    "breed": "English Cocker Spaniel",
+    "group": "Sporting Group",
+    "request_name": "english-cocker-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/English_Cocker_Spaniel#/media/File:%22Bill%22_-_Cocker_spaniel_anglais_2.JPG"
+  },
+  {
+    "breed": "English Foxhound",
+    "group": "Hound Group",
+    "request_name": "english-foxhound",
+    "picture_url": "https://en.wikipedia.org/wiki/English_Foxhound#/media/File:English_Foxhound_portrait.jpg"
+  },
+  {
+    "breed": "English Setter",
+    "group": "Sporting Group",
+    "request_name": "english-setter",
+    "picture_url": "https://en.wikipedia.org/wiki/English_Setter#/media/File:EnglishSetter9_fx_wb.jpg"
+  },
+  {
+    "breed": "English Sheepdog",
+    "group": "Herding Group",
+    "request_name": "old-english-sheepdog",
+    "picture_url": "https://en.wikipedia.org/wiki/Old_English_Sheepdog#/media/File:Old_English_Sheepdog_(side).jpg"
+  },
+  {
+    "breed": "English Springer Spaniel",
+    "group": "Sporting Group",
+    "request_name": "english-springer-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/English_Springer_Spaniel#/media/File:English_Springer_Spaniel_in_Tallinn.JPG"
+  },
+  {
+    "breed": "English Toy Spaniel",
+    "group": "Toy Group",
+    "request_name": "english-toy-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/King_Charles_Spaniel#/media/File:King_Charles_Spaniel_200.jpg"
+  },
+  {
+    "breed": "Entlebucher Mountain Dog",
+    "group": "Herding Group",
+    "request_name": "entlebucher-mountain-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Entlebucher_Mountain_Dog#/media/File:Elio_v_Schaerlig_im_Juni_2007_klein.jpg"
+  },
+  {
+    "breed": "Estrela Mountain Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "estrela-mountain-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Estrela_Mountain_Dog#/media/File:Estrela_Mountain_Dog_6_month_old_male.jpg"
+  },
+  {
+    "breed": "Eurasier",
+    "group": "Foundation Stock Service",
+    "request_name": "eurasier",
+    "picture_url": "https://en.wikipedia.org/wiki/Eurasier#/media/File:Eurasier_BailyWtatze.jpg"
+  },
+  {
+    "breed": "Field Spaniel",
+    "group": "Sporting Group",
+    "request_name": "field-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/Field_Spaniel#/media/File:Field_spaniel_581.jpg"
+  },
+  {
+    "breed": "Finnish Lapphund",
+    "group": "Herding Group",
+    "request_name": "finnish-lapphund",
+    "picture_url": "https://en.wikipedia.org/wiki/Finnish_Lapphund#/media/File:Finnish_Lapphund_Glenchess_Revontuli.jpg"
+  },
+  {
+    "breed": "Finnish Spitz",
+    "group": "Non-Sporting Group",
+    "request_name": "finnish-spitz",
+    "picture_url": "https://en.wikipedia.org/wiki/Finnish_Spitz#/media/File:Finnish_Spitz_600.jpg"
+  },
+  {
+    "breed": "Flat-Coated Retriever",
+    "group": "Sporting Group",
+    "request_name": "flat-coated-retriever",
+    "picture_url": "https://en.wikipedia.org/wiki/Flat-coated_Retriever#/media/File:Flat_Coated_Retriever_-_black.jpg"
+  },
+  {
+    "breed": "French Bulldog",
+    "group": "Non-Sporting Group",
+    "request_name": "french-bulldog",
+    "picture_url": "https://en.wikipedia.org/wiki/French_Bulldog#/media/File:2008-07-28_Dog_at_Frolick_Field.jpg"
+  },
+  {
+    "breed": "French Spaniel",
+    "group": "Foundation Stock Service",
+    "request_name": "french-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/French_Spaniel#/media/File:04031137_Epagneul_Francais.jpg"
+  },
+  {
+    "breed": "German Longhaired Pointer",
+    "group": "Foundation Stock Service",
+    "request_name": "german-longhaired-pointer",
+    "picture_url": "https://en.wikipedia.org/wiki/German_Longhaired_Pointer#/media/File:DeutschLanghaarneu.jpg"
+  },
+  {
+    "breed": "German Pinscher",
+    "group": "Working Group",
+    "request_name": "german-pinscher",
+    "picture_url": "https://en.wikipedia.org/wiki/German_Pinscher#/media/File:Bvdb-duitse_pincher.jpg"
+  },
+  {
+    "breed": "German Shepherd Dog",
+    "group": "Herding Group",
+    "request_name": "german-shepherd-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/German_Shepherd#/media/File:German_Shepherd_-_DSC_0346_(10096362833).jpg"
+  },
+  {
+    "breed": "German Shorthaired Pointer",
+    "group": "Sporting Group",
+    "request_name": "german-shorthaired-pointer",
+    "picture_url": "https://en.wikipedia.org/wiki/German_Shorthaired_Pointer#/media/File:Duitse_staande_korthaar_10-10-2.jpg"
+  },
+  {
+    "breed": "German Spitz",
+    "group": "Foundation Stock Service",
+    "request_name": "german-spitz",
+    "picture_url": "https://en.wikipedia.org/wiki/German_Spitz#/media/File:Goldilocks.gif"
+  },
+  {
+    "breed": "German Wirehaired Pointer",
+    "group": "Sporting Group",
+    "request_name": "german-wirehaired-pointer",
+    "picture_url": "https://en.wikipedia.org/wiki/German_Wirehaired_Pointer#/media/File:GermanWirehrPtr1_wb.jpg"
+  },
+  {
+    "breed": "Giant Schnauzer",
+    "group": "Working Group",
+    "request_name": "giant-schnauzer",
+    "picture_url": "https://en.wikipedia.org/wiki/Giant_Schnauzer#/media/File:GiantSchnauzer.jpg"
+  },
+  {
+    "breed": "Glen of Imaal Terrier",
+    "group": "Terrier Group",
+    "request_name": "glen-of-imaal-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Glen_of_Imaal_Terrier#/media/File:Wheaten_glen_of_imaal.jpg"
+  },
+  {
+    "breed": "Golden Retriever",
+    "group": "Sporting Group",
+    "request_name": "golden-retriever",
+    "picture_url": "https://en.wikipedia.org/wiki/Golden_Retriever#/media/File:Golden_Retriever_Carlos_(10581910556).jpg"
+  },
+  {
+    "breed": "Gordon Setter",
+    "group": "Sporting Group",
+    "request_name": "gordon-setter",
+    "picture_url": "https://en.wikipedia.org/wiki/Gordon_Setter#/media/File:Orrvilas_enska_w800px.jpg"
+  },
+  {
+    "breed": "Grand Basset Griffon Vendeen",
+    "group": "Hound Group",
+    "request_name": "grand-basset-griffon-vendeen",
+    "picture_url": "https://en.wikipedia.org/wiki/Grand_Basset_Griffon_Vend%C3%A9en#/media/File:P_Basset_Griffon_Vendeen_600.jpg"
+  },
+  {
+    "breed": "Great Dane",
+    "group": "Working Group",
+    "request_name": "great-dane",
+    "picture_url": "https://en.wikipedia.org/wiki/Great_Dane#/media/File:Dog_niemiecki_%C5%BC%C3%B3%C5%82ty_LM980.jpg"
+  },
+  {
+    "breed": "Great Pyrenees",
+    "group": "Working Group",
+    "request_name": "great-pyrenees",
+    "picture_url": "https://en.wikipedia.org/wiki/Pyrenean_Mountain_Dog#/media/File:Great_Pyrenees_Mountain_Dog_2.png"
+  },
+  {
+    "breed": "Greater Swiss Mountain Dog",
+    "group": "Working Group",
+    "request_name": "greater-swiss-mountain-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Greater_Swiss_Mountain_Dog#/media/File:Greater_Swiss_Mountain_Dog_2018.jpg"
+  },
+  {
+    "breed": "Greyhound",
+    "group": "Hound Group",
+    "request_name": "greyhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Greyhound#/media/File:GraceTheGreyhound.jpg"
+  },
+  {
+    "breed": "Hamiltonstovare",
+    "group": "Foundation Stock Service",
+    "request_name": "hamiltonstovare",
+    "picture_url": "https://en.wikipedia.org/wiki/Hamiltonst%C3%B6vare#/media/File:Hamiltonstovare_600.jpg"
+  },
+  {
+    "breed": "Hanoverian Scenthound",
+    "group": "Foundation Stock Service",
+    "request_name": "hanoverian-scenthound",
+    "picture_url": "https://en.wikipedia.org/wiki/Hanover_Hound#/media/File:Hannoverscher_Schweisshund.jpg"
+  },
+  {
+    "breed": "Harrier",
+    "group": "Hound Group",
+    "request_name": "harrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Harrier_(dog)#/media/File:Harrier_tricolour.jpg"
+  },
+  {
+    "breed": "Havanese",
+    "group": "Toy Group",
+    "request_name": "havanese",
+    "picture_url": "https://en.wikipedia.org/wiki/Havanese_dog#/media/File:A_Havanese_judging.jpg"
+  },
+  {
+    "breed": "Hokkaido",
+    "group": "Foundation Stock Service",
+    "request_name": "hokkaido",
+    "picture_url": "https://en.wikipedia.org/wiki/Hokkaido_(dog)#/media/File:Hokkaidou_inu.jpg"
+  },
+  {
+    "breed": "Hovawart",
+    "group": "Foundation Stock Service",
+    "request_name": "hovawart",
+    "picture_url": "https://en.wikipedia.org/wiki/Hovawart#/media/File:Helos_11.jpg"
+  },
+  {
+    "breed": "Ibizan Hound",
+    "group": "Hound Group",
+    "request_name": "ibizan-hound",
+    "picture_url": "https://en.wikipedia.org/wiki/Ibizan_Hound#/media/File:Podenco_z_ibizy_645.jpg"
+  },
+  {
+    "breed": "Icelandic Sheepdog",
+    "group": "Herding Group",
+    "request_name": "icelandic-sheepdog",
+    "picture_url": "https://en.wikipedia.org/wiki/Icelandic_Sheepdog#/media/File:Icelandic_Sheepdog_Alisa_von_Lehenberg.jpg"
+  },
+  {
+    "breed": "Irish Red and White Setter",
+    "group": "Sporting Group",
+    "request_name": "irish-red-and-white-setter",
+    "picture_url": "https://en.wikipedia.org/wiki/Irish_Red_and_White_Setter#/media/File:Irish_Red_And_White_Setter_2005.jpg"
+  },
+  {
+    "breed": "Irish Setter",
+    "group": "Sporting Group",
+    "request_name": "irish-setter",
+    "picture_url": "https://en.wikipedia.org/wiki/Irish_Setter#/media/File:Can_Setter_dog_GFDL.jpg"
+  },
+  {
+    "breed": "Irish Terrier",
+    "group": "Terrier Group",
+    "request_name": "irish-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Irish_Terrier#/media/File:IrishTerrierSydenhamHillWoods.jpg"
+  },
+  {
+    "breed": "Irish Water Spaniel",
+    "group": "Sporting Group",
+    "request_name": "irish-water-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/Irish_Water_Spaniel#/media/File:Irlandzki_spaniel_wodny_676.jpg"
+  },
+  {
+    "breed": "Irish Wolfhound",
+    "group": "Hound Group",
+    "request_name": "irish-wolfhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Irish_wolfhound#/media/File:(2)_Irish_Wolfhound_4.jpg"
+  },
+  {
+    "breed": "Italian Greyhound",
+    "group": "Toy Group",
+    "request_name": "italian-greyhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Italian_Greyhound#/media/File:Italian_Greyhound_standing_gray_(cropped).jpg"
+  },
+  {
+    "breed": "Jagdterrier",
+    "group": "Foundation Stock Service",
+    "request_name": "jagdterrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Jagdterrier#/media/File:Jagdterrier_bulgaria.jpg"
+  },
+  {
+    "breed": "Japanese Akitainu",
+    "group": "Foundation Stock Service",
+    "request_name": "japanese-akitainu",
+    "picture_url": "https://en.wikipedia.org/wiki/Akita_(dog)#/media/File:Akita_Inu_dog.jpg"
+  },
+  {
+    "breed": "Japanese Chin",
+    "group": "Toy Group",
+    "request_name": "japanese-chin",
+    "picture_url": "https://en.wikipedia.org/wiki/Japanese_Chin#/media/File:Japanese_Chin_adult.jpg"
+  },
+  {
+    "breed": "Japanese Spitz",
+    "group": "Foundation Stock Service",
+    "request_name": "japanese-spitz",
+    "picture_url": "https://en.wikipedia.org/wiki/Japanese_Spitz#/media/File:JapaneseSpitzPhoto1_-_hiro.jpg"
+  },
+  {
+    "breed": "Japanese Terrier",
+    "group": "Foundation Stock Service",
+    "request_name": "japanese-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Japanese_Terrier#/media/File:Japanese_Terrier_22.04.2012_2pl.jpg"
+  },
+  {
+    "breed": "Jindo",
+    "group": "Foundation Stock Service",
+    "request_name": "jindo",
+    "picture_url": "https://en.wikipedia.org/wiki/Korean_Jindo#/media/File:Peeb_the_Korea_Jindo_Dog.jpg"
+  },
+  {
+    "breed": "Kai Ken",
+    "group": "Foundation Stock Service",
+    "request_name": "kai-ken",
+    "picture_url": "https://en.wikipedia.org/wiki/Kai_Ken#/media/File:Kai-front.jpg"
+  },
+  {
+    "breed": "Karelian Bear Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "karelian-bear-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Karelian_Bear_Dog#/media/File:Karelski_pies_na_nied%C5%BAwiedzie_sylwetka.JPG"
+  },
+  {
+    "breed": "Keeshond",
+    "group": "Non-Sporting Group",
+    "request_name": "keeshond",
+    "picture_url": "https://en.wikipedia.org/wiki/Keeshond#/media/File:Keeshond_Majic_standing_cropped.jpg"
+  },
+  {
+    "breed": "Kerry Blue Terrier",
+    "group": "Terrier Group",
+    "request_name": "kerry-blue-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Kerry_Blue_Terrier#/media/File:Kerry_Blue_Terrier.jpg"
+  },
+  {
+    "breed": "Kishu Ken",
+    "group": "Foundation Stock Service",
+    "request_name": "kishu-ken",
+    "picture_url": "https://en.wikipedia.org/wiki/Kishu#/media/File:Kishu.jpg"
+  },
+  {
+    "breed": "Komondor",
+    "group": "Working Group",
+    "request_name": "komondor",
+    "picture_url": "https://en.wikipedia.org/wiki/Komondor#/media/File:Komondor_delvin.jpg"
+  },
+  {
+    "breed": "Kromfohrlander",
+    "group": "Foundation Stock Service",
+    "request_name": "kromfohrlander",
+    "picture_url": "https://en.wikipedia.org/wiki/Kromfohrl%C3%A4nder#/media/File:Kromfohrlander_standing_in_snow,_North_Carolina,_USA..png"
+  },
+  {
+    "breed": "Kuvasz",
+    "group": "Working Group",
+    "request_name": "kuvasz",
+    "picture_url": "https://en.wikipedia.org/wiki/Kuvasz#/media/File:Kuvasz_named_Kan.jpg"
+  },
+  {
+    "breed": "Labrador Retriever",
+    "group": "Sporting Group",
+    "request_name": "labrador-retriever",
+    "picture_url": "https://en.wikipedia.org/wiki/Labrador_Retriever#/media/File:Labrador_on_Quantock_(2175262184).jpg"
+  },
+  {
+    "breed": "Lagotto Romagnolo",
+    "group": "Sporting Group",
+    "request_name": "lagotto-romagnolo",
+    "picture_url": "https://en.wikipedia.org/wiki/Lagotto_Romagnolo#/media/File:Lagotto_Romagnolo.jpg"
+  },
+  {
+    "breed": "Lakeland Terrier",
+    "group": "Terrier Group",
+    "request_name": "lakeland-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Lakeland_Terrier#/media/File:Lakeland_Terrier.jpg"
+  },
+  {
+    "breed": "Lancashire Heeler",
+    "group": "Miscellaneous Class",
+    "request_name": "lancashire-heeler",
+    "picture_url": "https://en.wikipedia.org/wiki/Lancashire_Heeler#/media/File:Lancashire_Heeler_600.jpg"
+  },
+  {
+    "breed": "Lapphund",
+    "group": "Foundation Stock Service",
+    "request_name": "swedish-lapphund",
+    "picture_url": "https://en.wikipedia.org/wiki/Swedish_Lapphund#/media/File:Svensk_lapphund.JPG"
+  },
+  {
+    "breed": "Lapponian Herder",
+    "group": "Foundation Stock Service",
+    "request_name": "lapponian-herder",
+    "picture_url": "https://en.wikipedia.org/wiki/Lapponian_Herder#/media/File:Lapskvallhund.jpg"
+  },
+  {
+    "breed": "Leonberger",
+    "group": "Working Group",
+    "request_name": "leonberger",
+    "picture_url": "https://en.wikipedia.org/wiki/Leonberger#/media/File:Leonberger_male.jpg"
+  },
+  {
+    "breed": "Lhasa Apso",
+    "group": "Non-Sporting Group",
+    "request_name": "lhasa-apso",
+    "picture_url": "https://en.wikipedia.org/wiki/Lhasa_Apso#/media/File:Aishia.jpg"
+  },
+  {
+    "breed": "Lowchen",
+    "group": "Non-Sporting Group",
+    "request_name": "lowchen",
+    "picture_url": "https://en.wikipedia.org/wiki/L%C3%B6wchen#/media/File:Adult_Lowchen_Gaiting.jpg"
+  },
+  {
+    "breed": "Maltese",
+    "group": "Toy Group",
+    "request_name": "maltese",
+    "picture_url": "https://en.wikipedia.org/wiki/Maltese_dog#/media/File:Maltese_600.jpg"
+  },
+  {
+    "breed": "Manchester Terrier",
+    "group": "Terrier Group",
+    "request_name": "manchester-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Manchester_Terrier#/media/File:Mancherster_Terrier.jpg"
+  },
+  {
+    "breed": "Mastiff",
+    "group": "Working Group",
+    "request_name": "mastiff",
+    "picture_url": "https://en.wikipedia.org/wiki/Mastiff#/media/File:The_dog_book_-_a_popular_history_of_the_dog,_with_practical_information_as_to_care_and_management_of_house,_kennel,_and_exhibition_dogs;_and_descriptions_of_all_the_important_breeds_(1906)_(20800295488).jpg"
+  },
+  {
+    "breed": "Miniature American Shepherd",
+    "group": "Herding Group",
+    "request_name": "miniature-american-shepherd",
+    "picture_url": "https://en.wikipedia.org/wiki/Miniature_American_Shepherd#/media/File:Blue_Merle_Miniature_American_Shepherd_in_Grass.jpg"
+  },
+  {
+    "breed": "Miniature Bull Terrier",
+    "group": "Terrier Group",
+    "request_name": "miniature-bull-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Miniature_Bull_Terrier#/media/File:Bull_terier_i_bull_terier_miniatura_d46.jpg"
+  },
+  {
+    "breed": "Miniature Pinscher",
+    "group": "Toy Group",
+    "request_name": "miniature-pinscher",
+    "picture_url": "https://en.wikipedia.org/wiki/Miniature_Pinscher#/media/File:Miniature_pinscher.jpg"
+  },
+  {
+    "breed": "Miniature Poodle",
+    "group": "Non-Sporting Group",
+    "request_name": "poodle-miniature",
+    "picture_url": "https://en.wikipedia.org/wiki/Poodle#/media/File:CH_Renaissance_Hopeful_Impulse.jpg"
+  },
+  {
+    "breed": "Miniature Schnauzer",
+    "group": "Terrier Group",
+    "request_name": "miniature-schnauzer",
+    "picture_url": "https://en.wikipedia.org/wiki/Miniature_Schnauzer#/media/File:%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80_%D0%BE%D0%BA%D1%80%D0%B0%D1%81_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC.JPG"
+  },
+  {
+    "breed": "Mountain Cur",
+    "group": "Foundation Stock Service",
+    "request_name": "mountain-cur",
+    "picture_url": "https://en.wikipedia.org/wiki/Mountain_Cur#/media/File:Mtncur.png"
+  },
+  {
+    "breed": "Mudi",
+    "group": "Miscellaneous Class",
+    "request_name": "mudi",
+    "picture_url": "https://en.wikipedia.org/wiki/Mudi#/media/File:Hondenras_Mudi.jpg"
+  },
+  {
+    "breed": "Neapolitan Mastiff",
+    "group": "Working Group",
+    "request_name": "neapolitan-mastiff",
+    "picture_url": "https://en.wikipedia.org/wiki/Neapolitan_Mastiff#/media/File:Mastino_Napoletano_R%C3%BCde_clp.JPG"
+  },
+  {
+    "breed": "Nederlandse Kooikerhondje",
+    "group": "Sporting Group",
+    "request_name": "nederlandse-kooikerhondje",
+    "picture_url": "https://en.wikipedia.org/wiki/Kooikerhondje#/media/File:Kooiker03.jpg"
+  },
+  {
+    "breed": "Newfoundland",
+    "group": "Working Group",
+    "request_name": "newfoundland",
+    "picture_url": "https://en.wikipedia.org/wiki/Newfoundland_dog#/media/File:Newfoundland_dog_Smoky.jpg"
+  },
+  {
+    "breed": "Norfolk Terrier",
+    "group": "Terrier Group",
+    "request_name": "norfolk-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Norfolk_Terrier#/media/File:Norfolk_terrier_CAC.jpg"
+  },
+  {
+    "breed": "Norrbottenspets",
+    "group": "Miscellaneous Class",
+    "request_name": "norrbottenspets",
+    "picture_url": "https://en.wikipedia.org/wiki/Norrbottenspets#/media/File:Nordic_Spitz.jpg"
+  },
+  {
+    "breed": "Norwegian Buhund",
+    "group": "Herding Group",
+    "request_name": "norwegian-buhund",
+    "picture_url": "https://en.wikipedia.org/wiki/Norwegian_Buhund#/media/File:Norwegian_Buhund_600.jpg"
+  },
+  {
+    "breed": "Norwegian Elkhound",
+    "group": "Hound Group",
+    "request_name": "norwegian-elkhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Norwegian_Elkhound#/media/File:Norwegian_Elkhound.jpg"
+  },
+  {
+    "breed": "Norwegian Lundehund",
+    "group": "Non-Sporting Group",
+    "request_name": "norwegian-lundehund",
+    "picture_url": "https://en.wikipedia.org/wiki/Norwegian_Lundehund#/media/File:Lundehund-2003.jpg"
+  },
+  {
+    "breed": "Norwich Terrier",
+    "group": "Terrier Group",
+    "request_name": "norwich-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Norwich_Terrier#/media/File:Norwichterrier.jpg"
+  },
+  {
+    "breed": "Nova Scotia Duck Tolling Retriever",
+    "group": "Sporting Group",
+    "request_name": "nova-scotia-duck-tolling-retriever",
+    "picture_url": "https://en.wikipedia.org/wiki/Nova_Scotia_Duck_Tolling_Retriever#/media/File:Duck_Toller.jpg"
+  },
+  {
+    "breed": "Otterhound",
+    "group": "Hound Group",
+    "request_name": "otterhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Otterhound#/media/File:Two_otterhounds.jpg"
+  },
+  {
+    "breed": "Papillon",
+    "group": "Toy Group",
+    "request_name": "papillon",
+    "picture_url": "https://en.wikipedia.org/wiki/Papillon_dog#/media/File:RileyPapillon.JPG"
+  },
+  {
+    "breed": "Parson Russell Terrier",
+    "group": "Terrier Group",
+    "request_name": "parson-russell-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Parson_Russell_Terrier#/media/File:05052881_PRT_braun_rau.jpg"
+  },
+  {
+    "breed": "Pekingese",
+    "group": "Toy Group",
+    "request_name": "pekingese",
+    "picture_url": "https://en.wikipedia.org/wiki/Pekingese#/media/File:1AKC_Pekingese_Dog_Show_2011.jpg"
+  },
+  {
+    "breed": "Pembroke Welsh Corgi",
+    "group": "Herding Group",
+    "request_name": "pembroke-welsh-corgi",
+    "picture_url": "https://en.wikipedia.org/wiki/Pembroke_Welsh_Corgi#/media/File:Welchcorgipembroke.JPG"
+  },
+  {
+    "breed": "Perro de Presa Canario",
+    "group": "Foundation Stock Service",
+    "request_name": "perro-de-presa-canario",
+    "picture_url": "https://en.wikipedia.org/wiki/Presa_Canario#/media/File:Presacanariobody.jpg"
+  },
+  {
+    "breed": "Peruvian Inca Orchid",
+    "group": "Miscellaneous Class",
+    "request_name": "peruvian-inca-orchid",
+    "picture_url": "https://en.wikipedia.org/wiki/Peruvian_Hairless_Dog#/media/File:PHDStandardStanding_-_Perro_Sin_Pelo_del_Per%C3%BA.jpg"
+  },
+  {
+    "breed": "Petit Basset Griffon Vendeen",
+    "group": "Hound Group",
+    "request_name": "petit-basset-griffon-vendeen",
+    "picture_url": "https://en.wikipedia.org/wiki/Petit_Basset_Griffon_Vend%C3%A9en#/media/File:P_Basset_Griffon_Vendeen_600.jpg"
+  },
+  {
+    "breed": "Pharaoh Hound",
+    "group": "Hound Group",
+    "request_name": "pharaoh-hound",
+    "picture_url": "https://en.wikipedia.org/wiki/Pharaoh_Hound#/media/File:Pies_faraona_e34.jpg"
+  },
+  {
+    "breed": "Plott Hound",
+    "group": "Hound Group",
+    "request_name": "plott-hound",
+    "picture_url": "https://en.wikipedia.org/wiki/Plott_Hound#/media/File:Bossplotthound.JPG"
+  },
+  {
+    "breed": "Pointer",
+    "group": "Sporting Group",
+    "request_name": "pointer",
+    "picture_url": "https://en.wikipedia.org/wiki/Pointer_(dog_breed)#/media/File:English_Pointer_orange-white.jpg"
+  },
+  {
+    "breed": "Polish Lowland Sheepdog",
+    "group": "Herding Group",
+    "request_name": "polish-lowland-sheepdog",
+    "picture_url": "https://en.wikipedia.org/wiki/Polish_Lowland_Sheepdog#/media/File:Polski_owczarek_nizinny_rybnik-kamien_pl.jpg"
+  },
+  {
+    "breed": "Pomeranian",
+    "group": "Toy Group",
+    "request_name": "pomeranian",
+    "picture_url": "https://en.wikipedia.org/wiki/Pomeranian_dog#/media/File:Pomeranian.JPG"
+  },
+  {
+    "breed": "Porcelaine",
+    "group": "Foundation Stock Service",
+    "request_name": "porcelaine",
+    "picture_url": "https://en.wikipedia.org/wiki/Porcelaine#/media/File:Porcelaine_2009_pl4.jpg"
+  },
+  {
+    "breed": "Portuguese Podengo",
+    "group": "Miscellaneous Class",
+    "request_name": "portuguese-podengo",
+    "picture_url": "https://en.wikipedia.org/wiki/Portuguese_Podengo#/media/File:Evitarocks.jpg"
+  },
+  {
+    "breed": "Portuguese Podengo Pequeno",
+    "group": "Hound Group",
+    "request_name": "portuguese-podengo-pequeno",
+    "picture_url": "https://en.wikipedia.org/wiki/Portuguese_Podengo#/media/File:Evitarocks.jpg"
+  },
+  {
+    "breed": "Portuguese Pointer",
+    "group": "Foundation Stock Service",
+    "request_name": "portuguese-pointer",
+    "picture_url": "https://en.wikipedia.org/wiki/Portuguese_Pointer#/media/File:Portuguese_pointer_11yo.jpg"
+  },
+  {
+    "breed": "Portuguese Sheepdog",
+    "group": "Foundation Stock Service",
+    "request_name": "portuguese-sheepdog",
+    "picture_url": "https://en.wikipedia.org/wiki/Portuguese_Sheepdog#/media/File:Cao_de_Serra_de_Aires600.jpg"
+  },
+  {
+    "breed": "Portuguese Water Dog",
+    "group": "Working Group",
+    "request_name": "portuguese-water-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Portuguese_Water_Dog#/media/File:C%C3%A3o_de_agua_Portugu%C3%AAs_2.jpg"
+  },
+  {
+    "breed": "Pudelpointer",
+    "group": "Foundation Stock Service",
+    "request_name": "pudelpointer",
+    "picture_url": "https://en.wikipedia.org/wiki/Pudelpointer#/media/File:Pudelpointer_on_point.jpg"
+  },
+  {
+    "breed": "Pug",
+    "group": "Toy Group",
+    "request_name": "pug",
+    "picture_url": "https://en.wikipedia.org/wiki/Pug#/media/File:Mops_oct09_cropped2.jpg"
+  },
+  {
+    "breed": "Puli",
+    "group": "Herding Group",
+    "request_name": "puli",
+    "picture_url": "https://en.wikipedia.org/wiki/Puli_dog#/media/File:PuliBlack_wb.jpg"
+  },
+  {
+    "breed": "Pumi",
+    "group": "Herding Group",
+    "request_name": "pumi",
+    "picture_url": "https://en.wikipedia.org/wiki/Pumi_dog#/media/File:Pumi_2.jpg"
+  },
+  {
+    "breed": "Pyrenean Mastiff",
+    "group": "Foundation Stock Service",
+    "request_name": "pyrenean-mastiff",
+    "picture_url": "https://en.wikipedia.org/wiki/Pyrenean_Mastiff#/media/File:MasPiri-Lula-ESP.jpg"
+  },
+  {
+    "breed": "Pyrenean Shepherd",
+    "group": "Herding Group",
+    "request_name": "pyrenean-shepherd",
+    "picture_url": "https://en.wikipedia.org/wiki/Pyrenean_Sheepdog#/media/File:Berger-des-Pyrenees_Ellea_800x600.jpg"
+  },
+  {
+    "breed": "Rafeiro do Alentejo",
+    "group": "Foundation Stock Service",
+    "request_name": "rafeiro-do-alentejo",
+    "picture_url": "https://en.wikipedia.org/wiki/Rafeiro_do_Alentejo#/media/File:Rafeiro_male.jpg"
+  },
+  {
+    "breed": "Rat Terrier",
+    "group": "Terrier Group",
+    "request_name": "rat-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Rat_Terrier#/media/File:AmRatTerr2_wb.jpg"
+  },
+  {
+    "breed": "Redbone Coonhound",
+    "group": "Hound Group",
+    "request_name": "redbone-coonhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Redbone_Coonhound#/media/File:Redbone-coonhound-detail.jpg"
+  },
+  {
+    "breed": "Rhodesian Ridgeback",
+    "group": "Hound Group",
+    "request_name": "rhodesian-ridgeback",
+    "picture_url": "https://en.wikipedia.org/wiki/Rhodesian_Ridgeback#/media/File:Rhodesian_ridgeback.jpg"
+  },
+  {
+    "breed": "Romanian Mioritic Shepherd Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "romanian-mioritic-shepherd-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Romanian_Mioritic_Shepherd_Dog#/media/File:Mioritic.jpg"
+  },
+  {
+    "breed": "Rottweiler",
+    "group": "Working Group",
+    "request_name": "rottweiler",
+    "picture_url": "https://en.wikipedia.org/wiki/Rottweiler#/media/File:Rottweiler_standing_facing_left.jpg"
+  },
+  {
+    "breed": "Russell Terrier",
+    "group": "Terrier Group",
+    "request_name": "russell-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Jack_Russell_Terrier#/media/File:Jack_Russell_Terrier_1.jpg"
+  },
+  {
+    "breed": "Russian Toy",
+    "group": "Miscellaneous Class",
+    "request_name": "russian-toy",
+    "picture_url": "https://en.wikipedia.org/wiki/Russkiy_Toy#/media/File:RusskiyToyWelpe9Mon.JPG"
+  },
+  {
+    "breed": "Russian Tsvetnaya Bolonka",
+    "group": "Foundation Stock Service",
+    "request_name": "russian-tsvetnaya-bolonka",
+    "picture_url": "https://en.wikipedia.org/wiki/Bichon#/media/File:RUSSKAYA_TSVETNAYA_BOLONKA,_Rayskoe_Sotsvetie_Tsevtik_(24264726856).jpg"
+  },
+  {
+    "breed": "Saint Bernard",
+    "group": "Working Group",
+    "request_name": "saint-bernard",
+    "picture_url": "https://en.wikipedia.org/wiki/St._Bernard_(dog)#/media/File:Hummel_Vedor_vd_Robandahoeve.jpg"
+  },
+  {
+    "breed": "Saluki",
+    "group": "Hound Group",
+    "request_name": "saluki",
+    "picture_url": "https://en.wikipedia.org/wiki/Saluki#/media/File:Red_Smooth_Saluki.jpg"
+  },
+  {
+    "breed": "Samoyed",
+    "group": "Working Group",
+    "request_name": "samoyed",
+    "picture_url": "https://en.wikipedia.org/wiki/Samoyed_dog#/media/File:11.10.2015_Samoyed_(cropped).jpg"
+  },
+  {
+    "breed": "Schapendoes",
+    "group": "Foundation Stock Service",
+    "request_name": "schapendoes",
+    "picture_url": "https://en.wikipedia.org/wiki/Schapendoes#/media/File:Nederlandse-schapendoes-02.jpg"
+  },
+  {
+    "breed": "Schipperke",
+    "group": "Non-Sporting Group",
+    "request_name": "schipperke",
+    "picture_url": "https://en.wikipedia.org/wiki/Schipperke#/media/File:Schipperke0001.jpg"
+  },
+  {
+    "breed": "Scottish Deerhound",
+    "group": "Hound Group",
+    "request_name": "scottish-deerhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Scottish_Deerhound#/media/File:Deerhound_Fernhill's_Kendra.jpg"
+  },
+  {
+    "breed": "Scottish Terrier",
+    "group": "Terrier Group",
+    "request_name": "scottish-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Scottish_Terrier#/media/File:Scottish_Terrier_Photo_of_Face.jpg"
+  },
+  {
+    "breed": "Sealyham Terrier",
+    "group": "Terrier Group",
+    "request_name": "sealyham-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Sealyham_Terrier#/media/File:Charmin_crufts_2009.jpg"
+  },
+  {
+    "breed": "Segugio Italiano",
+    "group": "Foundation Stock Service",
+    "request_name": "segugio-italiano",
+    "picture_url": "https://en.wikipedia.org/wiki/Segugio_Italiano#/media/File:Rough-haired_Italian_Hound.JPG"
+  },
+  {
+    "breed": "Shetland Sheepdog",
+    "group": "Herding Group",
+    "request_name": "shetland-sheepdog",
+    "picture_url": "https://en.wikipedia.org/wiki/Shetland_Sheepdog#/media/File:Shetland_Sheepdog_600.jpg"
+  },
+  {
+    "breed": "Shiba Inu",
+    "group": "Non-Sporting Group",
+    "request_name": "shiba-inu",
+    "picture_url": "https://en.wikipedia.org/wiki/Shiba_Inu#/media/File:Taka_Shiba.jpg"
+  },
+  {
+    "breed": "Shih Tzu",
+    "group": "Toy Group",
+    "request_name": "shih-tzu",
+    "picture_url": "https://en.wikipedia.org/wiki/Shih_Tzu#/media/File:Shihtzu_(cropped).jpg"
+  },
+  {
+    "breed": "Shikoku",
+    "group": "Foundation Stock Service",
+    "request_name": "shikoku",
+    "picture_url": "https://en.wikipedia.org/wiki/Shikoku_dog#/media/File:Shikokuken.jpg"
+  },
+  {
+    "breed": "Siberian Husky",
+    "group": "Working Group",
+    "request_name": "siberian-husky",
+    "picture_url": "https://en.wikipedia.org/wiki/Siberian_Husky#/media/File:Husky_L.jpg"
+  },
+  {
+    "breed": "Silky Terrier",
+    "group": "Toy Group",
+    "request_name": "silky-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Australian_Silky_Terrier#/media/File:Australian_Silky_Terrier_Alana_Of_Silky's_Dream.jpg"
+  },
+  {
+    "breed": "Sloughi",
+    "group": "Hound Group",
+    "request_name": "sloughi",
+    "picture_url": "https://en.wikipedia.org/wiki/Sloughi#/media/File:Sloughi_sandcolor.jpg"
+  },
+  {
+    "breed": "Slovakian Wirehaired Pointer",
+    "group": "Foundation Stock Service",
+    "request_name": "slovakian-wirehaired-pointer",
+    "picture_url": "https://en.wikipedia.org/wiki/Slovak_Rough-haired_Pointer#/media/File:ICh_Brita_z_Ruzenice.jpg"
+  },
+  {
+    "breed": "Slovensky Cuvac",
+    "group": "Foundation Stock Service",
+    "request_name": "slovensky-cuvac",
+    "picture_url": "https://en.wikipedia.org/wiki/Slovak_Cuvac#/media/File:Cuvac_1.jpg"
+  },
+  {
+    "breed": "Slovensky Kopov",
+    "group": "Foundation Stock Service",
+    "request_name": "slovensky-kopov",
+    "picture_url": "https://en.wikipedia.org/wiki/Slovensk%C3%BD_kopov#/media/File:Go%C5%84czy_s%C5%82owacki_pl.jpg"
+  },
+  {
+    "breed": "Small Munsterlander",
+    "group": "Miscellaneous Class",
+    "request_name": "small-munsterlander",
+    "picture_url": "https://en.wikipedia.org/wiki/Small_M%C3%BCnsterl%C3%A4nder#/media/File:Kleiner_M%C3%BCnsterl%C3%A4nder.jpg"
+  },
+  {
+    "breed": "Spanish Mastiff",
+    "group": "Foundation Stock Service",
+    "request_name": "spanish-mastiff",
+    "picture_url": "https://en.wikipedia.org/wiki/Spanish_Mastiff#/media/File:Spanish_Mastiff.JPG"
+  },
+  {
+    "breed": "Spanish Water Dog",
+    "group": "Herding Group",
+    "request_name": "spanish-water-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Spanish_Water_Dog#/media/File:Perro_agua.jpg"
+  },
+  {
+    "breed": "Spinone Italiano",
+    "group": "Sporting Group",
+    "request_name": "spinone-italiano",
+    "picture_url": "https://en.wikipedia.org/wiki/Spinone_Italiano#/media/File:05042363_Spinone_braun.jpg"
+  },
+  {
+    "breed": "Stabyhoun",
+    "group": "Foundation Stock Service",
+    "request_name": "stabyhoun",
+    "picture_url": "https://en.wikipedia.org/wiki/Stabyhoun#/media/File:Frisianstaby.jpg"
+  },
+  {
+    "breed": "Standard Poodle",
+    "group": "Non-Sporting Group",
+    "request_name": "poodle-standard",
+    "picture_url": "https://en.wikipedia.org/wiki/Poodle#/media/File:Full_attention_(8067543690).jpg"
+  },
+  {
+    "breed": "Standard Schnauzer",
+    "group": "Working Group",
+    "request_name": "standard-schnauzer",
+    "picture_url": "https://en.wikipedia.org/wiki/Standard_Schnauzer#/media/File:Emppumenossa.jpg"
+  },
+  {
+    "breed": "Sussex Spaniel",
+    "group": "Sporting Group",
+    "request_name": "sussex-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/Sussex_Spaniel#/media/File:Sussex_spaniel_t43.jpg"
+  },
+  {
+    "breed": "Swedish Vallhund",
+    "group": "Herding Group",
+    "request_name": "swedish-vallhund",
+    "picture_url": "https://en.wikipedia.org/wiki/Swedish_Vallhund#/media/File:V%C3%A4stg%C3%B6taspets_hane_5_%C3%A5r.jpg"
+  },
+  {
+    "breed": "Taiwan Dog",
+    "group": "Foundation Stock Service",
+    "request_name": "taiwan-dog",
+    "picture_url": "https://en.wikipedia.org/wiki/Taiwan_Dog#/media/File:Formosan_nina.jpg"
+  },
+  {
+    "breed": "Teddy Roosevelt Terrier",
+    "group": "Miscellaneous Class",
+    "request_name": "teddy-roosevelt-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Teddy_Roosevelt_Terrier#/media/File:Teddyterrier.jpg"
+  },
+  {
+    "breed": "Thai Ridgeback",
+    "group": "Foundation Stock Service",
+    "request_name": "thai-ridgeback",
+    "picture_url": "https://en.wikipedia.org/wiki/Thai_Ridgeback#/media/File:Thai-Ridgeback.jpg"
+  },
+  {
+    "breed": "Tibetan Mastiff",
+    "group": "Working Group",
+    "request_name": "tibetan-mastiff",
+    "picture_url": "https://en.wikipedia.org/wiki/Tibetan_Mastiff#/media/File:Adventure,_sport_and_travel_on_the_Tibetan_steppes_(1911)_(14597105527).jpg"
+  },
+  {
+    "breed": "Tibetan Spaniel",
+    "group": "Non-Sporting Group",
+    "request_name": "tibetan-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/Tibetan_spaniel#/media/File:Tibetansk_spaniel.jpg"
+  },
+  {
+    "breed": "Tibetan Terrier",
+    "group": "Non-Sporting Group",
+    "request_name": "tibetan-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Tibetan_Terrier#/media/File:Tibet_Terrier_Bennie_(cropped).jpg"
+  },
+  {
+    "breed": "Tornjak",
+    "group": "Foundation Stock Service",
+    "request_name": "tornjak",
+    "picture_url": "https://en.wikipedia.org/wiki/Tornjak#/media/File:Bosniantornjak.jpg"
+  },
+  {
+    "breed": "Tosa",
+    "group": "Foundation Stock Service",
+    "request_name": "tosa",
+    "picture_url": "https://en.wikipedia.org/wiki/Tosa_(dog)#/media/File:BUKADAI_2.jpg"
+  },
+  {
+    "breed": "Toy Fox Terrier",
+    "group": "Toy Group",
+    "request_name": "toy-fox-terrier",
+    "picture_url": "https://en.wikipedia.org/wiki/Toy_Fox_Terrier#/media/File:Toy_Fox_Terrier_2.jpg"
+  },
+  {
+    "breed": "Toy Poodle",
+    "group": "Toy Group",
+    "request_name": "poodle-toy",
+    "picture_url": "https://en.wikipedia.org/wiki/Poodle#/media/File:Full_attention_(8067543690).jpg"
+  },
+  {
+    "breed": "Transylvanian Hound",
+    "group": "Foundation Stock Service",
+    "request_name": "transylvanian-hound",
+    "picture_url": "https://en.wikipedia.org/wiki/Transylvanian_Hound#/media/File:Erdelyi_kopo_VadaszNimrodSzeder01.jpg"
+  },
+  {
+    "breed": "Treeing Tennessee Brindle",
+    "group": "Foundation Stock Service",
+    "request_name": "treeing-tennessee-brindle",
+    "picture_url": "https://en.wikipedia.org/wiki/Treeing_Tennessee_Brindle#/media/File:Sienna_TTBD.jpg"
+  },
+  {
+    "breed": "Treeing Walker Coonhound",
+    "group": "Hound Group",
+    "request_name": "treeing-walker-coonhound",
+    "picture_url": "https://en.wikipedia.org/wiki/Treeing_Walker_Coonhound#/media/File:Treeing_walker_coonhound.jpg"
+  },
+  {
+    "breed": "Vizsla",
+    "group": "Sporting Group",
+    "request_name": "vizsla",
+    "picture_url": "https://en.wikipedia.org/wiki/Vizsla#/media/File:Wy%C5%BCe%C5%82_w%C4%99gierski_g%C5%82adkow%C5%82osy_500.jpg"
+  },
+  {
+    "breed": "Volpino Italiano",
+    "group": "Foundation Stock Service",
+    "request_name": "volpino-italiano",
+    "picture_url": "https://en.wikipedia.org/wiki/Volpino_Italiano#/media/File:Szpic_miniaturowy_Volpino_MWPR_Katowice_2008_(cropped).JPG"
+  },
+  {
+    "breed": "Weimaraner",
+    "group": "Sporting Group",
+    "request_name": "weimaraner",
+    "picture_url": "https://en.wikipedia.org/wiki/Weimaraner#/media/File:Weimaraner_wb.jpg"
+  },
+  {
+    "breed": "Welsh Springer Spaniel",
+    "group": "Sporting Group",
+    "request_name": "welsh-springer-spaniel",
+    "picture_url": "https://en.wikipedia.org/wiki/Welsh_Springer_Spaniel#/media/File:Welsh_Springer_Spaniel_1.jpg"
+  },
+  {
+    "breed": "Wetterhoun",
+    "group": "Foundation Stock Service",
+    "request_name": "wetterhoun",
+    "picture_url": "https://en.wikipedia.org/wiki/Wetterhoun#/media/File:Fryzyjski_pies_wodny_u68.jpg"
+  },
+  {
+    "breed": "Whippet",
+    "group": "Hound Group",
+    "request_name": "whippet",
+    "picture_url": "https://en.wikipedia.org/wiki/Whippet#/media/File:WhippetWhiteSaddled_wb.jpg"
+  },
+  {
+    "breed": "Wirehaired Pointing Griffon",
+    "group": "Sporting Group",
+    "request_name": "wirehaired-pointing-griffon",
+    "picture_url": "https://en.wikipedia.org/wiki/Wirehaired_Pointing_Griffon#/media/File:GCH_Int_Ch_UCH_Zerubbabel_von_Herrenhausen_CGC_MHA.jpg"
+  },
+  {
+    "breed": "Wirehaired Vizsla",
+    "group": "Sporting Group",
+    "request_name": "wirehaired-vizsla",
+    "picture_url": "https://en.wikipedia.org/wiki/Wirehaired_Vizsla#/media/File:Dr%C3%B3tosvizsla_vadat_%C3%A1ll.jpg"
+  },
+  {
+    "breed": "Working Kelpie",
+    "group": "Foundation Stock Service",
+    "request_name": "working-kelpie",
+    "picture_url": "https://en.wikipedia.org/wiki/Australian_Kelpie#/media/File:Hilu_the_Australian_Kelpie_dog.jpg"
+  },
+  {
+    "breed": "Xoloitzcuintli",
+    "group": "Non-Sporting Group",
+    "request_name": "xoloitzcuintli",
+    "picture_url": "https://en.wikipedia.org/wiki/Xoloitzcuintle#/media/File:BIR_Grupp_5-_MEXIKANSK_NAKENHUND,_Lokal_Hero%E2%80%99s_King_Og_Hart%E2%80%99s_Istas_(23607403303).jpg"
+  },
+  {
+    "breed": "Yakutian Laika",
+    "group": "Foundation Stock Service",
+    "request_name": "yakutian-laika",
+    "picture_url": "https://en.wikipedia.org/wiki/Yakutian_Laika#/media/File:Yl01.jpg"
+  },
+  {
+    "breed": "Yorkshire Terrier",
+    "group": "Toy Group",
+    "request_name": "yorkshire-terrier",
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/%282_version%29_Grupp_3%2C_YORKSHIRETERRIER%2C_NO_UCH_SE_UCH_Oxzar_Amazing_Bel%E2%80%99s_Toffy_%2824310212305%29.jpg/220px-%282_version%29_Grupp_3%2C_YORKSHIRETERRIER%2C_NO_UCH_SE_UCH_Oxzar_Amazing_Bel%E2%80%99s_Toffy_%2824310212305%29.jpg"
+  }
+]

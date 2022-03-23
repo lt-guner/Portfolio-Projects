@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+/* CSS property for header section */
+.header {
+    background-color: green;
+    padding: 15px;
+    text-align: center;
+}
+
+/* CSS property for navigation menu */
+.nav_menu {
+    overflow: hidden;
+    background-color: #333;
+}
+.nav_menu a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav_menu a:hover {
+    background-color: white;
+    color: green;
+}
+
+/* CSS property for content section */
+.columnA, .columnB, .columnC {
+    float: left;
+    width: 32%;
+    padding: 15px;
+    text-align:justify;
+}
+
+.columnD, .columnE, .columnF, .columnG {
+    float: left;
+    width: 25%;
+    padding: 15px;
+    text-align:justify;
+}
+
+h2 {
+    color:green;
+    text-align:left;
+}
+
+h1 {
+    color:green;
+    text-align:left;
+}
+
+.collapsible {
+    background-color: #ffffff;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* CSS property for content section */
+.column1, .column2, .column3, .column4, .column5, .column6, .column7, .column8 {
+    float: left;
+    width: 10%;
+    padding: 15px;
+    text-align:justify;
+}
+
+ .column9 {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    text-align:justify;
+}
+
+
+/* Media query to set website layout
+according to screen size */
+@media screen and (max-width:600px) {
+    .columnA, .columnB, .columnC {
+        width: 50%;
+    }
+}
+@media screen and (max-width:400px) {
+    .columnA, .columnB, .columnC {
+        width: 100%;
+    }
+}
+
+
+/* Media query to set website layout
+according to screen size */
+@media screen and (max-width:600px) {
+    .column1, .column2, .column3, .column4, .column5, .column6, .column7, .column8 {
+        width: 50%;
+    }
+}
+@media screen and (max-width:400px) {
+    .column1, .column2, .column3, .column4, .column5, .column6, .column7, .column8  {
+        width: 100%;
+    }
+}
+
+/* Media query to set website layout
+according to screen size */
+@media screen and (max-width:600px) {
+    .column9  {
+        width: 50%;
+    }
+}
+@media screen and (max-width:400px) {
+    .column9 {
+        width: 100%;
+    }
