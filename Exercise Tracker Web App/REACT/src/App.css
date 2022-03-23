@@ -1,0 +1,147 @@
+body{
+  align-items: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: rgb(167, 32, 32);
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  min-height: 100vh;
+}
+
+caption{
+    border: 2px solid rgb(255, 166, 0);
+    background-color: rgb(53, 202, 190);
+    padding: 10px 10px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+  background-color: azure;
+  border: 3px solid gray;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  color: red;
+  margin: 20px;
+}
+
+thead{
+  border: 2px solid rgb(255, 166, 0);
+  background-color: rgb(53, 202, 190);
+  padding: 10px 10px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+} 
+
+tbody{
+  border: 2px solid rgb(255, 166, 0);
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+tr{
+  border: 2px solid rgb(255, 166, 0);
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+th{
+  padding: 10px 10px;
+  border: 2px solid rgb(255, 166, 0);
+  background-color: rgb(53, 202, 190);
+  color: black;
+  justify-content: center;
+  align-items: center;
+} 
+
+td { 
+  padding: 10px 10px;
+  border: 2px solid rgb(255, 166, 0);
+  padding: 10px 100px;
+  justify-content: center;
+}
+
+input{
+  padding: 10px 10px;
+  background-color: whitesmoke;
+}
+
+button{
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+form{
+  background-color: azure;
+  border: 3px solid gray;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  color: red;
+  margin: 20px;
+}
+
+fieldset{
+  border: 2px solid rgb(255, 166, 0);
+  background-color: rgb(53, 202, 190);
+  padding: 10px 10px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+legend{
+  color: black;
+  justify-content: start;
+  align-items: start;
+  background-color: azure;
+}
+
+label{
+
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  color: red;
+  margin: 20px;
+}
+
+select{
+  background-color: azure;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  color: red;
+  margin: 20px;
+}
+
+.App {
+  text-align: center;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+
+.App-link {
+  color: #000000;
+}
