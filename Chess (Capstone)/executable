@@ -1,0 +1,3 @@
+install latest version of python
+pip install requirements.txt
+execute run_frontend.py

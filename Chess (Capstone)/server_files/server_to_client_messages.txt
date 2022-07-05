@@ -1,0 +1,14 @@
+Server-to-Client Messages:                          Meaning:
+
+'Connected as player #'                             Initial message upon successfully connected to server.
+e.g. 'Connected as player 0'                        #0: client is white
+                                                    #1: client is black
+
+'Waiting for an opponent'                           Waiting for opponent to connect (likely only received by client 0)
+
+'Error'                                             Failed to connect to server. Server already has two players.
+
+'Opponent disconnected'                             Lost connection with the opponent.
+
+'[A-H][1-8] to [A-H][1-8]'                          A client has moved a piece from a starting coordinate to an end coordinate
+e.g. 'E2 to E4'

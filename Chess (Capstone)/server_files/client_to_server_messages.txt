@@ -1,0 +1,10 @@
+Client-to-Server Messages:                          Meaning:
+
+'Waiting for game to start'                         Client is waiting for server to indicate opponent has connected to begin game
+
+'Ready'                                             Client is waiting to send/receive a move
+
+'[A-H][1-8] to [A-H][1-8]'                          Client has moved a piece from a starting coordinate to an end coordinate
+e.g. 'E2 to E4'                                     Can be taken from the Move class object
+
+
